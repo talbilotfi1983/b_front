@@ -1,0 +1,130 @@
+image: node:latest
+before_script:
+  - killall chrome || true
+
+stages:
+  - dependencies
+  - build
+  - deploy
+
+dependencies:
+  stage: dependencies
+  script:
+    - npm i
+    - npm i --only=dev
+    - cp /usr/local/lib/bootstrap/sb-admin-2.min.css  /home/gitlab-runner/builds/94648600/0/lotfi/app-v2/node_modules/bootstrap/dist/css/
+  cache:
+    key: "depen"
+    paths:
+      - node_modules
+
+build_develop:
+  stage: build
+  only:
+    - develop
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - ng build
+  cache:
+    key: "depen"
+    paths:
+      - node_modules
+    policy: pull
+
+build_qualif:
+  stage: build
+  only:
+    - qualif
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - cp -r /usr/local/lib/config_qualif/* /home/gitlab-runner/builds/94648600/0/lotfi/app-v2/src/environments/
+    - ng build
+  cache:
+    key: "depen"
+    paths:
+      - node_modules
+    policy: pull
+
+deploy_qualif:
+  stage: deploy
+  only:
+    - qualif
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval `ssh-agent -s`
+    - ssh-add <(echo "$STAGING_QUALIFICATION_PRIVATE_KEY")
+    - ssh-add -l
+    - ssh extranet@192.168.4.174 "cd /data/extranet_v2 && rm -rf save && mv prod save"
+    - ssh extranet@192.168.4.174 "mkdir /data/extranet_v2/prod"
+    - ssh extranet@192.168.4.174 "cp -r /data/extranet_v2/express/* /data/extranet_v2/prod/"
+    - scp -r dist/app-v2/* extranet@192.168.4.174:/data/extranet_v2/prod
+    - ssh extranet@192.168.4.174 "sudo systemctl restart extranet_v2_node.service"
+
+build_preprod:
+  stage: build
+  only:
+    - preprod
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - cp -r /usr/local/lib/config_preprod/* /home/gitlab-runner/builds/94648600/0/lotfi/app-v2/src/environments/
+    - ng build
+  cache:
+    key: "depen"
+    paths:
+      - node_modules
+    policy: pull
+
+deploy_preprod:
+  stage: deploy
+  only:
+    - preprod
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval `ssh-agent -s`
+    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - ssh-add -l
+    - ssh extranet@192.168.4.172 "cd /data/extranet_v2 && rm -rf save && mv prod save"
+    - ssh extranet@192.168.4.172 "mkdir /data/extranet_v2/prod"
+    - ssh extranet@192.168.4.172 "cp -r /data/extranet_v2/express/* /data/extranet_v2/prod/"
+    - scp -r dist/app-v2/* extranet@192.168.4.172:/data/extranet_v2/prod
+    - ssh extranet@192.168.4.172 "sudo systemctl restart extranet_v2_node.service"
+
+build_prod:
+  stage: build
+  only:
+    - master
+  artifacts:
+    paths:
+      - dist/
+  script:
+    - cp -r /usr/local/lib/config_prod/* /home/gitlab-runner/builds/94648600/0/lotfi/app-v2/src/environments/
+    - ng build
+  cache:
+    key: "depen"
+    paths:
+      - node_modules
+    policy: pull
+
+deploy_prod:
+  stage: deploy
+  only:
+    - master
+  script:
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval `ssh-agent -s`
+    - ssh-add <(echo "$STAGING_PRODUCTION_PRIVATE_KEY")
+    - ssh-add -l
+    - ssh extranet@192.168.4.173 "cd /var/www/extranet_v2 && rm -rf save && mv prod save"
+    - ssh extranet@192.168.4.173 "mkdir /var/www/extranet_v2/prod"
+    - ssh extranet@192.168.4.173 "cp -r /var/www/extranet_v2/express/* /var/www/extranet_v2/prod/"
+    - scp -r dist/app-v2/* extranet@192.168.4.173:/var/www/extranet_v2/prod
+    - ssh extranet@192.168.4.173 "sudo systemctl restart extranet_v2_node.service"
