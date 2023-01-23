@@ -3,21 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { C1Component } from './c1/c1.component';
-import { C2Component } from './c2/c2.component';
+import { FooterComponent } from './modules/footer/footer.component';
+import { HeaderComponent } from './modules/header/header.component';
+import { NavComponent } from './modules/nav/nav.component';
 import { P404Component } from './p404/p404.component';
-import { PagesComponent } from './pages/pages.component';
-import { ModulesComponent } from './modules/modules.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
-    C1Component,
-    C2Component,
     P404Component,
-      PagesComponent,
-      ModulesComponent
-   ],
+    HeaderComponent,
+    FooterComponent,
+    NavComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule
