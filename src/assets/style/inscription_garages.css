@@ -1,0 +1,147 @@
+.block-content-partenaire{
+      padding: 10px 20px 0px 20px;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+.top-line-list button {
+  background-color: #E3A719;
+  color: white;
+  padding: 10px 22px 10px 22px;
+  margin: 7px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+}
+
+.top-line-list button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #E3A719;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 70px;
+  width:61%; 
+  height: 90%; 
+  overflow: auto; 
+  background-color: white;
+  padding-top: 20px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  z-index: 99999 !important;
+}
+#id02{
+  top: 9.2%;
+  box-shadow: 10px 10px 15px 10px rgba(0,0,0,.5);
+
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #E3A719;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+
+
+@media (max-width: 991px) {
+  /* POPUP */
+  .modal{
+   
+    width: 100%;
+   left: auto;
+    padding:10px;
+    
+  }
+  .contact-form-box #contact-form{
+    
+    margin:25px;
+  }
+  .block-content-partenaire{
+    
+    height:80%;
+    overflow:auto;
+
+  }
+  .contact-form-box #contact-form input[type="text"]{
+    border-left: solid 2px #E3A719;
+   
+  }
+
+  /* [EO]POPUP */
+
+  /* CLOSE */
+  
+  /* [EO] CLOSE */
+}
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+ 
+  .modal{
+    margin: 5px;
+  }
+
+
+
+
+}
