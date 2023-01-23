@@ -1,3 +1,55 @@
-<p>
-  nav works!
-</p>
+<header class="clearfix">
+  <!-- Bootstrap navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+
+    <!-- navbar list container -->
+    <div class="nav-list-container">
+      <div class="container">
+        <a class="navbar-brand" href="/"><img src="static/images/logo/logo.png" alt=""></a>
+        <!-- Ici je met mon burger en utilisant la methode 'ajax' -->
+        <div class="burg">
+          <a href="/"><img class="img_logo" src="static/images/logo/logo.png" alt=""></a>
+          <div class="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+          </div>
+        </div>
+        <!-- [eo] burger -->
+
+        <!-- Navigation  -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <ul class="nav navbar-nav">
+            <li><a class="home" href="index"><i class="fas fa-home"></i></a></li>
+            <li><a class="tech" href="pneus">Pneus</a></li>
+            <li><a class="tech" href="pneus">pneu auto</a></li>
+            <li><a class="tech" href="pneus">pneu moto</a></li>
+            <li><a class="tech" href="pneus">pneu quad</a></li>
+            <li><a class="tech" href="pneus">pneu camion</a></li>
+            <li><a class="tech" href="pneus">pneu agricole</a></li>
+            <li><a class="fashion" href="garagesPartenaires">Garages Partenaires</a></li>
+            <li><a class="sport" href="contact">contact</a></li>
+            <li>
+              <span class="time-now">
+                <button (click)="inscriptionGarages = 'block'">Inscription garages
+                </button>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <!-- EO Navigation  -->
+
+
+      </div>
+    </div>
+    <!-- End navbar list container -->
+
+  </nav>
+  <!-- End Bootstrap navbar -->
+</header>
+<!-- End Header -->
+
+<app-popup-inscription-garages *ngIf="this.inscriptionGarages === 'block'"
+  [inscriptionGarages]="this.inscriptionGarages" (emitNoneDisplay)="inscriptionGarages = 'none'">
+</app-popup-inscription-garages>

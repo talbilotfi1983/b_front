@@ -1,0 +1,87 @@
+<!-- End Top line -->
+<div class="overlay" tabindex="-1" role="dialog" [ngStyle]="{'display':inscriptionGarages}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <span class="close" title="Close Modal" (click)="closePopup()">&times;</span>
+
+      <!-- block content -->
+      <div class="block-content-partenaire">
+
+        <!-- contact form box -->
+        <div class="contact-form-box">
+          <div class="title-section">
+            <h1>
+              <span>Vous êtes un centre de montage de pneus ou un garage ? Inscrivez-vous :</span>
+            </h1>
+          </div>
+          <form id="contact-form" method="POST" action="" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-md-4">
+                <input id="nomGaragePart" name="nom_garage" type="text" placeholder="Nom de garage*" required>
+                <div id="error_nomGarage" class="invalid-feedback"> Veuillez entrez un nom de garage . </div>
+              </div>
+              <div class="col-md-4">
+                <input id="adresseGaragePart" name="adresse_garage" type="text" placeholder="Adresse du garage*"
+                  required>
+                <div id="error_adresseGarage" class="invalid-feedback"> Veuillez entrer un nom de garage . </div>
+              </div>
+              <div class="col-md-4">
+                <input id="villeintervention" name="ville_garage" type="text" placeholder="Ville(s) d'intervention*"
+                  required>
+                <div id="error_intervention" class="invalid-feedback"> Veuillez faire un choix d'intervention .</div>
+              </div>
+              <div class="col-md-4">
+                <input id="phoneGaragePart" name="telephone_garage" type="text" placeholder="Numéro de téléphone*">
+                <div id="error_phone" class="invalid-feedback"> Veuillez entrez un N° valide . </div>
+
+              </div>
+              <div class="col-md-4">
+                <input id="emailGarage" name="email_garage" type="text" placeholder="Votre adresse mail*" required>
+                <div id="errorEmailGarage" class="invalid-feedback"> Veuillez vérifier votre adresse E-mail . </div>
+              </div>
+              <div class="col-md-4">
+                <input id="prix" name="prix_garage" type="int" placeholder="Prix*" required>
+                <div id="error_prix" class="invalid-feedback"> Veuillez entrez votre prix </div>
+
+              </div>
+              <div class="col-md-4">
+                <select id="lieuDintervention" class="formSelectPieceSurface" name="lieu_intervation_garage">
+                  <option value="À domicile" disabled>Lieu d'intervention*</option>
+                  <option value="À domicile">À domicile</option>
+                  <option value="Au garage">Au garage</option>
+                  <option value="Dans un rayon de 25km">Dans un rayon de 25km</option>
+                  <option value="Dans un rayon de 50km">Dans un rayon de 50km</option>
+                  <option value="Dans un rayon de 75km">Dans un rayon de 75km</option>
+                  <option value="Dans un rayon de 100km ou +">Dans un rayon de 100km ou +</option>
+                </select>
+                <div id="error_lieu" class="invalid-feedback"> Veuillez choisir un lieu d'intervention. </div>
+
+              </div>
+              <div class="col-md-4">
+                <input id="diametre" name="diametre_pneu" type="text" placeholder='Diamètre maximum en pouce*' required>
+                <div id="error_diametre" class="invalid-feedback"> Veuillez choisir le diametre des pneus . </div>
+              </div>
+              <div class="col-md-4">
+                <input id="mail" placeholder="Logo du (garage ou entreprise)*" name="logo_garage" type="file">
+              </div>
+              <div class="col-md-12">
+                <input id="mail" name="observation" type="text" placeholder="Votre observation">
+              </div>
+            </div>
+            <div>
+              <span class="txt-small champsObligatoires">* Champs obligatoires </span>
+            </div><br /><br />
+            <div class="g-recaptcha" data-sitekey="6Lc1zDocAAAAAIXP0wNP3_M4r0i6g2smrImsbipO" data-callback='onSubmit'
+              data-action='submit'></div>
+            <button type="submit" id="submit-contact" name="inscriptionsGarages">
+              <i class="far fa-paper-plane"></i>Soumettre
+            </button>
+
+          </form>
+        </div>
+        <!-- End contact form box -->
+      </div>
+      <!-- End block content -->
+    </div>
+  </div>
+</div>
