@@ -6,14 +6,18 @@ import { AppComponent } from './app.component';
 import { C1Component } from './c1/c1.component';
 import { C2Component } from './c2/c2.component';
 import { P404Component } from './p404/p404.component';
+import { PagesComponent } from './pages/pages.component';
+import { ModulesComponent } from './modules/modules.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     C1Component,
     C2Component,
-    P404Component
-  ],
+    P404Component,
+      PagesComponent,
+      ModulesComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule
