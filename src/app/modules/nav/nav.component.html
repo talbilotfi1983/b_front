@@ -1,4 +1,6 @@
-<header class="clearfix">
+<button (click)="inscriptionGarages = 'block'">Inscription garages
+</button>
+<div class="clearfix">
   <!-- Bootstrap navbar -->
   <nav class="navbar navbar-default navbar-static-top">
 
@@ -47,7 +49,7 @@
 
   </nav>
   <!-- End Bootstrap navbar -->
-</header>
+</div>
 <!-- End Header -->
 
 <app-popup-inscription-garages *ngIf="this.inscriptionGarages === 'block'"
