@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+
+RewriteRule ^(.*)$ https://www.bobopneus-equipements.com/$1 [R,L]
+RewriteRule ^([a-zA-Z0-9]+-[a-zA-Z0-9]+)?([a-zA-Z0-9]+-[a-zA-Z0-9]+)$ /index.php?page=$1&$2 [NC,L]
+RewriteRule ^([a-zA-Z0-9-]+-?)*$ /index.php?page=$1 [NC,L]
+
