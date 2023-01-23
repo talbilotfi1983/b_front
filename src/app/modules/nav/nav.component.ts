@@ -2,8 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
-  templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.scss']
+  templateUrl: './nav.component.html'
 })
 export class NavComponent implements OnInit {
   @Input() inscriptionGarages: any;
