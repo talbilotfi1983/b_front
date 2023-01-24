@@ -7527,14 +7527,12 @@ body.comming-soon-page.underconstruction {
     margin: 10px;
   }
 
+  .captcha {
+    margin-left: 100px;
+    color: red;
+  }
+
   /* [EO] STAGIAIRE */
-
-
-
-
-
-
-
 
   .image-slider .image-post .hover-box .inner-hover h2 {
     font-size: 16px;
@@ -7877,11 +7875,6 @@ a:hover {
   color: #FFFFFF;
   padding: 10px;
   margin-right: 65%;
-
-
-
-
-
 }
 
 .container_item {
@@ -7891,17 +7884,12 @@ a:hover {
   background: #FFFFFF;
   margin-left: 30px;
   margin-right: 30px;
-
-
 }
 
 .search {
-
   border: #E3A719 solid 0.5px;
   padding: 10px;
   padding-left: 42%;
-
-
 }
 
 .tools {
@@ -7930,7 +7918,6 @@ a:hover {
 }
 
 .icones {
-
   font-size: 50px;
 }
 
@@ -7940,8 +7927,6 @@ a:hover {
 /* [EO] Recherche produit  */
 .content {
   display: flex;
-
-
 }
 
 .produit {
@@ -8056,7 +8041,6 @@ a:hover {
 #item66,
 #item461,
 #item67 {
-
   visibility: hidden;
   border: #E3A719 solid 0.5px;
   border-right: none;
@@ -8064,15 +8048,11 @@ a:hover {
   border-top: none;
   padding: 7px;
   display: none;
-
-
-
 }
 
 li {
   list-style-type: none;
   color: gray;
-
 }
 
 /* EO Mais items */
@@ -8084,13 +8064,10 @@ li {
   box-shadow: 0px 1px 6px rgb(58 59 63 / 20%);
   border-radius: 1rem;
   background: #FFFFFF;
-  /* #E3A719 */
-
 }
 
 .contenue:hover {
   border-bottom: 3px solid #E3A719;
-
 }
 
 /* EO Contenu */
@@ -8099,8 +8076,6 @@ li {
   font-size: small;
   justify-content: space-between;
   text-align: center;
-
-
 }
 
 /* [EO] Page pieces Equipement */
@@ -8762,3 +8737,7 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
   font-size: 13px;
   color: #333333;
 }
+
+/*********************************************
+    -   MODALS  -
+**********************************************/

@@ -33,40 +33,6 @@
           color: #E3A719;
         }
       }
-
-      // Contact form box
-      .block-content-partenaire {
-        padding: 20px;
-
-        .contact-form-box {
-
-          input[type=text]:focus,
-          input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-          }
-
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 991px) {
-
-  .block-content-partenaire {
-    height: 80%;
-    overflow: auto;
-
-    .contact-form-box {
-      #contact-form {
-        margin: 25px;
-
-        input,
-        select {
-          border-left: solid 2px #E3A719;
-        }
-      }
     }
   }
 }

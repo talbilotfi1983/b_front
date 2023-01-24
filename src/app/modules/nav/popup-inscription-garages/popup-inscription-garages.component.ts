@@ -14,7 +14,6 @@ export class PopupInscriptionGaragesComponent implements OnInit {
   ngOnInit() {
   }
   // tslint:disable-next-line:typedef
-
   closePopup() {
     this.inscriptionGarages = 'none';
     this.emitNoneDisplay.emit(this.inscriptionGarages);

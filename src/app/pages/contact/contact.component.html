@@ -82,10 +82,10 @@
               <label for="message">Message *</label>
               <textarea id="message" name="message" required></textarea>
               <span class="txt-small champsObligatoires">* Champs obligatoires</span>
-
-              <div id="captcha" class="g-recaptcha" data-sitekey="6Lc1zDocAAAAAIXP0wNP3_M4r0i6g2smrImsbipO"
-                data-callback='onSubmit' data-action='submit'> </div>
-              <span id="captcha" style="margin-left:100px;color:red"></span>
+              <!-- id="captcha" -->
+              <div class="g-recaptcha" data-sitekey="6Lc1zDocAAAAAIXP0wNP3_M4r0i6g2smrImsbipO" data-callback='onSubmit'
+                data-action='submit'> </div>
+              <span class="captcha" id="captcha"></span>
               <button id="bouton" onclick='validate()' name="contact" class="btn btn-outline-secondary btnEnvoie"
                 type="submit">
                 <i class="fas fa-paper-plane"></i> Envoyer
