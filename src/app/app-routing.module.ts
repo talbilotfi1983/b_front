@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { P404Component } from './p404/p404.component';
+import { P404Component } from './modules/p404/p404.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
+  { path: 'contact', component: ContactComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: P404Component },
 ];

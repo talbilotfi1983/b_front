@@ -6,7 +6,7 @@ import { FooterComponent } from './modules/footer/footer.component';
 import { HeaderComponent } from './modules/header/header.component';
 import { NavComponent } from './modules/nav/nav.component';
 import { PopupInscriptionGaragesComponent } from './modules/nav/popup-inscription-garages/popup-inscription-garages.component';
-import { P404Component } from './p404/p404.component';
+import { P404Component } from './modules/p404/p404.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { EquipementsComponent } from './pages/home/equipements/equipements.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,7 +18,6 @@ import { SliderComponent } from './pages/home/slider/slider.component';
 @NgModule({
   declarations: [
     AppComponent,
-    P404Component,
     HeaderComponent,
     FooterComponent,
     NavComponent,
@@ -29,7 +28,8 @@ import { SliderComponent } from './pages/home/slider/slider.component';
     PiecesComponent,
     EquipementsComponent,
     PneusComponent,
-    JantesComponent
+    JantesComponent,
+    P404Component
   ],
   imports: [
     BrowserModule,
