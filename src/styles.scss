@@ -8735,3 +8735,50 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
 /*********************************************
     -   MODALS  -
 **********************************************/
+
+/*********************************************
+    -   PNEUS API  -
+**********************************************/
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper .slider-container {
+  height: 350px;
+  position: relative;
+  transition: 900ms;
+}
+
+.wrapper .slider-container .slide-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.wrapper .slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navigation-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  margin: 16px 0;
+}
+
+.navigation-dots .single-cube {
+  height: 11px;
+  width: 11px;
+  border: 2px solid #E3A719;
+  cursor: pointer;
+  margin: 0 8px;
+  transition: 400ms;
+}
+
+.navigation-dots .single-cube.active {
+  background-color: #E3A719;
+}
