@@ -5492,20 +5492,36 @@ ul.autor-list>li:hover .autor-box {
   color: #E3A719;
 }
 
-.forum-table div.second-col {
-  width: 30%;
-}
+.forum-table {
+  div {
 
-.forum-table div.third-col {
-  width: 30%;
-  text-align: right;
-}
+    .first-col,
+    .second-col,
+    .third-col {
+      width: 30%;
 
-.forum-table div.table-row {
-  overflow: hidden;
-  background: #fafafa;
-  position: relative;
-  border: #f5a501 1px solid;
+      span {
+        color: #222222;
+      }
+
+      li,
+      p {
+        font-size: 15px;
+        line-height: 25px;
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -webkit-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          color: #E3A719;
+          text-transform: inherit;
+        }
+      }
+    }
+  }
 }
 
 .forum-table div.table-row>div {
@@ -5545,17 +5561,9 @@ ul.autor-list>li:hover .autor-box {
 .forum-table div.table-row>div p {
   display: block;
   margin: 0;
-  font-size: 13px;
 }
 
-.forum-table div.table-row div.second-col span {
-  color: #222222;
-}
 
-.forum-table div.table-row div.second-col p {
-  font-size: 10px;
-  text-transform: uppercase;
-}
 
 .forum-table div.table-row div.third-col img {
   width: 75px;
@@ -5567,21 +5575,7 @@ ul.autor-list>li:hover .autor-box {
   margin-left: 17px;
 }
 
-.forum-table div.table-row div.third-col p {
-  font-size: 10px;
-  line-height: 16px;
-}
 
-.forum-table div.table-row div.third-col p a {
-  display: inline-block;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  color: #E3A719;
-  text-transform: inherit;
-}
 
 .forum-table div.table-row div.forum-post {
   overflow: hidden;
