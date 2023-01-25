@@ -4,10 +4,12 @@ import { P404Component } from './modules/p404/p404.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { GaragesPartenairesComponent } from './pages/garages-partenaires/garages-partenaires.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PneusComponent } from './pages/pneus/pneus.component';
 
 const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'GaragesPartenaires', component: GaragesPartenairesComponent },
+  { path: 'pneus', component: PneusComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: P404Component },
 ];

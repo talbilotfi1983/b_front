@@ -18,6 +18,38 @@
       border-radius: 5px;
       width: 65%;
 
+      .block-content {
+        padding: 20px 0 0 0 !important;
+
+        .title-section h1 span {
+          padding: 0 5px 16px 20px !important;
+        }
+
+        .forum-table {
+          margin-bottom: 0 !important;
+
+          .table-row {
+            border: none !important;
+          }
+
+          .table-row,
+          .second-col,
+          .third-col p {
+            font-size: 15px;
+          }
+        }
+      }
+
+      h1 {
+        color: #222222;
+        font-size: 15px;
+        font-family: "Myriad Pro", sans-serif;
+        font-weight: 700;
+        margin: 0 0 30px;
+        text-transform: uppercase;
+        margin-bottom: -1px;
+      }
+
       // Le bouton croix pour fermer
       .close {
         position: absolute;
@@ -27,6 +59,7 @@
         font-weight: bold;
         color: #00000080;
         cursor: pointer;
+        z-index: 2;
 
         &:hover,
         &:focus {

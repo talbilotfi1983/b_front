@@ -4,12 +4,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { HeaderComponent } from './modules/header/header.component';
+import { PopupGaragesComponent } from './modules/modals/popup-garages/popup-garages.component';
+import { PopupInscriptionGaragesComponent } from './modules/modals/popup-inscription-garages/popup-inscription-garages.component';
 import { NavComponent } from './modules/nav/nav.component';
-import { PopupInscriptionGaragesComponent } from './modules/nav/popup-inscription-garages/popup-inscription-garages.component';
 import { P404Component } from './modules/p404/p404.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { GaragesPartenairesComponent } from './pages/garages-partenaires/garages-partenaires.component';
-import { PopupGaragesComponent } from './pages/garages-partenaires/popup-garages/popup-garages.component';
 import { EquipementsComponent } from './pages/home/equipements/equipements.component';
 import { HomeComponent } from './pages/home/home.component';
 import { JantesComponent } from './pages/home/jantes/jantes.component';
@@ -23,7 +23,6 @@ import { SliderComponent } from './pages/home/slider/slider.component';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    PopupInscriptionGaragesComponent,
     SliderComponent,
     HomeComponent,
     ContactComponent,
@@ -33,6 +32,8 @@ import { SliderComponent } from './pages/home/slider/slider.component';
     JantesComponent,
     P404Component,
     GaragesPartenairesComponent,
+    PneusComponent,
+    PopupInscriptionGaragesComponent,
     PopupGaragesComponent
   ],
   imports: [
