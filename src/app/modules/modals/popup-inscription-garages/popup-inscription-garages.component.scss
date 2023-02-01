@@ -1,52 +1,39 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  overflow-y: scroll;
+.modal-dialog {
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 65%;
 
-  .modal-dialog {
-    .modal-content {
-      background-color: #fefefe;
-      margin: 5% auto 15% auto;
-      border: 1px solid #888;
-      border-radius: 5px;
-      width: 65%;
+    // Le bouton croix pour fermer
+    .close {
+      position: absolute;
+      right: 17px;
+      top: 8px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #00000080;
+      cursor: pointer;
 
-      // Le bouton croix pour fermer
-      .close {
-        position: absolute;
-        right: 17px;
-        top: 8px;
-        font-size: 32px;
-        font-weight: bold;
-        color: #00000080;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-          color: #E3A719;
-        }
+      &:hover,
+      &:focus {
+        color: #E3A719;
       }
+    }
 
-      // Contact form box
-      .block-content-partenaire {
-        padding: 20px;
+    // Contact form box
+    .block-content-partenaire {
+      padding: 20px;
 
-        .contact-form-box {
+      .contact-form-box {
 
-          input[type=text]:focus,
-          input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-          }
-
+        input[type=text]:focus,
+        input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
         }
+
       }
     }
   }

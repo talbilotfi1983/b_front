@@ -1,3 +1,47 @@
+<!-- Top line -->
+<div class="top-line">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        Soldes Jusqu'a -70% ! ULTIME DEMARQUE / les meilleurs promos
+      </div>
+      <div class="col-md-9">
+        <ul class="top-line-list">
+          <!-- Panier -->
+          <li class="panier">
+            <a class="nmbreArticle">
+              <i class='fas fa-cart-plus'></i>&nbsp;
+              <span>10 article(s)</span>
+            </a>
+            <span class="somme">0,00&nbsp;€</span>
+          </li>
+          <!-- EO panier -->
+
+          <!-- Inscription -->
+          <li class="inscription" (click)="inscriptionGarages = 'block'">
+            <a>
+              <i class='fas fa-user-edit'></i>
+              Inscription garage
+            </a>
+          </li>
+          <!-- EO inscription -->
+
+          <!-- Connection -->
+          <li class="connection" (click)="connection = 'block'">
+            <a>
+              <i class='fas fa-user-lock'></i>
+              Connection
+            </a>
+          </li>
+          <!-- EO connection -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Top line -->
+
+<!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg nav-list-container">
   <div class="container">
     <a href="/"><img src="../../../assets/images/logo/logo.png" alt="logo"></a>
@@ -31,24 +75,23 @@
         <li class="nav-item">
           <a class="nav-link" href="contact">Contact</a>
         </li>
-        <li class="d-flex align-items-center">
-          <span class="time-now">
-            <button (click)="inscriptionGarages = 'block'">Inscription garages
-            </button>
-          </span>
-        </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Contact</a></li>
-          </ul>
-        </li> -->
       </ul>
     </div>
   </div>
 </nav>
+<!-- EO Nav Bar -->
+
+<!-- Inscription garage -->
 <app-popup-inscription-garages *ngIf="this.inscriptionGarages === 'block'"
   [inscriptionGarages]="this.inscriptionGarages" (emitNoneDisplay)="inscriptionGarages = 'none'">
 </app-popup-inscription-garages>
+
+<!-- Page de connection -->
+<app-connection *ngIf="this.connection === 'block'" [connection]="this.connection"
+  (emitNoneDisplay)="connection = 'none'">
+</app-connection>
+
+<!-- Page inscription -->
+<app-inscription *ngIf="this.inscription === 'block'" [inscription]="this.inscription"
+  (emitNoneDisplay)="inscription = 'none'">
+</app-inscription>

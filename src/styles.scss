@@ -94,12 +94,11 @@ header.active .nav-list-container {
   display: block;
   right: 0;
   bottom: 0;
-  text-align: center;
+  text-align: right;
 }
 
 .top-line ul.top-line-list li {
   display: inline-block;
-  margin-right: 18px;
 }
 
 .top-line ul.top-line-list li span,
@@ -327,6 +326,10 @@ header.active .nav-list-container {
 
 .top-line ul.top-line-list li:before {
   border-left: none;
+}
+
+.top-line ul {
+  margin: 0 !important;
 }
 
 .navbar-nav>li>a.active {
@@ -6626,27 +6629,6 @@ body.comming-soon-page.underconstruction {
 
 @media (max-width: 1199px) {
 
-
-
-
-
-  /* MODIF STAGIAIRES */
-
-  /*Bouton popup*/
-  .top-line-list button {
-    margin-top: 20px;
-  }
-
-  .navbar-brand img {
-    margin-top: -50px;
-  }
-
-  /*[EO] Bouton popup*/
-
-
-
-  /* [EO] modif stagiaires */
-
   #container {
     overflow: hidden;
   }
@@ -8285,23 +8267,68 @@ header.active .nav-list-container {
   position: inherit;
 }
 
-.navbar-nav>li>span>button {
-  color: white !important;
-  font-size: 13px;
-  font-family: 'Myriad Pro', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  padding: 16px 25px;
-  position: relative;
-  z-index: 2;
-  background: #E3A719 !important;
-  border: none !important;
-  border-radius: 50px;
+
+// Les boutons
+.top-line {
+  .top-line-list {
+
+    // Panier + Inscription + Connection
+    .panier,
+    .inscription,
+    .connection {
+      border-radius: 3px;
+      padding: 10px 25px;
+      font-size: 13px;
+      font-family: 'Myriad Pro', sans-serif;
+      font-weight: 700;
+      border: none !important;
+      cursor: pointer;
+
+      a {
+        color: white !important;
+
+        i {
+          margin: 0 5px 0 0;
+        }
+      }
+    }
+
+    // Panier
+    .panier {
+      background-color: rgb(60 60 60);
+
+      .nmbreArticle {
+        margin: 0 10px 0 0;
+
+        span {
+          color: white !important;
+        }
+      }
+
+      .somme {
+        font-size: 20px;
+        color: #E3A719 !important;
+      }
+    }
+
+    // Inscription
+    .inscription {
+      background-color: #198754d1;
+      display: inline-block;
+      margin: 0 18px 0 18px;
+    }
+
+    // Connection
+    .connection {
+      background-color: #E3A719;
+
+      &:before {
+        margin: 0 !important;
+      }
+    }
+  }
 }
+
 
 .navbar-nav>li>a {
   color: #ccc !important;
@@ -8735,6 +8762,18 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
 /*********************************************
     -   MODALS  -
 **********************************************/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  overflow-y: scroll;
+}
 
 /*********************************************
     -   PNEUS API  -

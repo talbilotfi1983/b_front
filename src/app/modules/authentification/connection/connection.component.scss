@@ -1,0 +1,34 @@
+.modal-dialog {
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 540px;
+    padding: 20px 60px;
+
+    // Le bouton croix pour fermer
+    .close {
+      position: absolute;
+      right: 17px;
+      top: 8px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #00000080;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: #E3A719;
+      }
+    }
+
+    .block-content {
+      .contact-form-box {
+        .title-section {
+          margin: 0 0 20px 0 !important;
+        }
+      }
+    }
+  }
+}

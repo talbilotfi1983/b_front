@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ConnectionComponent } from './modules/authentification/connection/connection.component';
+import { InscriptionComponent } from './modules/authentification/inscription/inscription.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { HeaderComponent } from './modules/header/header.component';
 import { PopupGaragesComponent } from './modules/modals/popup-garages/popup-garages.component';
@@ -34,7 +36,9 @@ import { SliderComponent } from './pages/home/slider/slider.component';
     GaragesPartenairesComponent,
     PneusComponent,
     PopupInscriptionGaragesComponent,
-    PopupGaragesComponent
+    PopupGaragesComponent,
+    ConnectionComponent,
+    InscriptionComponent
   ],
   imports: [
     BrowserModule,
