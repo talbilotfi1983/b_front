@@ -1,4 +1,15 @@
 .modal-dialog {
+  img {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    top: -45px;
+    left: 560px;
+    z-index: 1;
+  }
+
   .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto;
@@ -27,6 +38,25 @@
       .contact-form-box {
         .title-section {
           margin: 0 0 20px 0 !important;
+
+          // Titre
+          h1 {
+            span {
+              font-size: 25px;
+            }
+          }
+        }
+
+        #contact-form {
+          h3 {
+            font-size: 18px;
+            margin: -12px 0 25px 0;
+          }
+
+          // Bouton checkbox
+          #fax {
+            margin: 0 !important;
+          }
         }
       }
     }

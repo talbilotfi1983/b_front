@@ -1,6 +1,7 @@
 <!-- End Top line -->
 <div class="overlay" tabindex="-1" role="dialog" [ngStyle]="{'display':connection}">
   <div class="modal-dialog">
+    <img class="position-absolute" src="../../../../assets/images/users/grand.jpg" alt="Users" class="rounded-circle">
     <div class="modal-content">
       <span class="close" title="Close Modal" (click)="closePopup()">&times;</span>
       <!-- block-wrapper-section -->
@@ -13,62 +14,29 @@
           <form id="contact-form">
             <h3>Entrez votre adresse e-mail et votre mot de passe</h3>
             <div class="row">
-              <div class="col-md-4">
-                <label for="email">Courriel *</label>
-                <input id="courriel" id="email" name="emailcontact" type="text" required>
-                <div id="error_email" class="invalid-feedback">Veuillez vérifier votre adresse E-mail </div>
+              <div class="col-md-12">
+                <input id="courriel" placeholder="Adresse électronique *" name="email" type="email" required>
+                <div id="error_email" class="invalid-feedback">Veuillez vérifier votre adresse e-mail </div>
               </div>
-              <div class="col-md-4">
-                <label for="telephone">Téléphone *</label>
-                <input id="telephone_contact" name="telephone" type="text" min="10" required>
-                <div id="error_telephone" class="invalid-feedback">Veuillez vérifier le format de votre N° de
-                  téléphone
+              <div class="col-md-12">
+                <input id="telephone_contact" placeholder="Mot de passe *" name="telephone" type="text" required>
+                <div id="error_telephone" class="invalid-feedback">
+                  Veuillez vérifier votre mot de passe
                 </div>
               </div>
-              <div class="col-md-4">
-                <label for="fax">Fax</label>
-                <input id="fax" name="fax" type="text">
+            </div>
+            <div class="row">
+              <div class="d-flex align-items-center col-md-6">
+                <input id="fax" name="fax" type="checkbox">&nbsp;&nbsp;
+                <span>Se souvenir de moi</span>
+              </div>
+              <div class="col-md-6">
+                <span class="txt-small champsObligatoires">* Champs obligatoires</span>
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-4">
-                <label for="adresse">Adresse *</label>
-                <input id="adresse" name="adresse" type="text" required>
-                <div id="error_adress" class="invalid-feedback">Veuillez entrer votre adresse </div>
-              </div>
-              <div class="col-md-4">
-                <label for="CP">Code postal *</label>
-                <input id="codePostal" name="cp" type="text" required>
-                <div id="error_codePostal" class="invalid-feedback">Veuillez entrer un code postal</div>
-              </div>
-              <div class="col-md-4">
-                <label for="telephone">Ville *</label>
-                <input id="ville" name="ville" type="text" required>
-                <div id="error_ville" class="invalid-feedback">Veuillez entrer votre ville</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <label for="garage">Garage</label>
-                <input id="garage" name="garage" type="text">
-              </div>
-              <div class="col-md-6">
-                <label for="CP">Sujet *</label>
-                <input id="sujet" name="sujet" type="text" required>
-                <div id="error_sujet" class="invalid-feedback">Veuillez entrer un sujet </div>
-              </div>
-            </div>
-            <label for="message">Message *</label>
-            <textarea id="message" name="message" required></textarea>
-            <span class="txt-small champsObligatoires">* Champs obligatoires</span>
-            <!-- id="captcha" -->
-            <div class="g-recaptcha" data-sitekey="6Lc1zDocAAAAAIXP0wNP3_M4r0i6g2smrImsbipO" data-callback='onSubmit'
-              data-action='submit'> </div>
-            <span class="captcha" id="captcha"></span>
-            <button id="bouton" onclick='validate()' name="contact" class="btn btn-outline-secondary btnEnvoie"
-              type="submit">
-              <i class="fas fa-paper-plane"></i> Envoyer
+            <button id="bouton" class="btn btn-outline-secondary btnEnvoie" type="submit">
+              <i class="fas fa-paper-plane"></i> Connexion
             </button>
           </form>
         </div>

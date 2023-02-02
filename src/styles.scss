@@ -5148,6 +5148,7 @@ div.list-post .post-content h2 a:hover {
   cursor: pointer;
 }
 
+.contact-form-box #contact-form input[type="email"],
 .contact-form-box #contact-form input[type="text"],
 .contact-form-box #comment-form input[type="text"],
 .contact-form-box #contact-form textarea,
@@ -5171,6 +5172,7 @@ div.list-post .post-content h2 a:hover {
   -o-transition: all 0.2s ease-in-out;
 }
 
+.contact-form-box #contact-form input[type="email"]:focus,
 .contact-form-box #contact-form input[type="text"]:focus,
 .contact-form-box #comment-form input[type="text"]:focus,
 .contact-form-box #contact-form textarea:focus,
