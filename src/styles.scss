@@ -105,7 +105,7 @@ header.active .nav-list-container {
 .top-line ul.top-line-list li a {
   display: inline-block;
   color: #777777;
-  font-size: 11px;
+  font-size: 15px;
   font-family: 'Myriad Pro', sans-serif;
   margin: 0;
   line-height: 15px;
@@ -5187,12 +5187,12 @@ div.list-post .post-content h2 a:hover {
 
 .contact-form-box #contact-form button,
 .contact-form-box #comment-form button {
-  color: #333232;
-  font-size: 11px;
+  color: #ffffff;
+  font-size: 15px;
   font-family: 'Myriad Pro', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  background: transparent;
+  background-color: #E3A719;
   padding: 8px 10px;
   border: 2px solid #ccc;
   -webkit-border-radius: 4px;
@@ -5203,6 +5203,7 @@ div.list-post .post-content h2 a:hover {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
+  float: right;
 }
 
 .contact-form-box #contact-form button i,
@@ -5212,8 +5213,8 @@ div.list-post .post-content h2 a:hover {
 
 .contact-form-box #contact-form button:hover,
 .contact-form-box #comment-form button:hover {
-  background: #E3A719;
-  color: #ffffff;
+  background-color: transparent;
+  color: #333232;
 }
 
 .contact-form-box .title-section span.email-not-published {
@@ -5224,6 +5225,11 @@ div.list-post .post-content h2 a:hover {
   font-size: 13px;
   text-transform: initial;
   font-weight: 400;
+}
+
+.champsObligatoires {
+  font-size: 13px;
+  color: red;
 }
 
 /*-------------------------------------------------*/
@@ -8823,3 +8829,6 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
 .navigation-dots .single-cube.active {
   background-color: #E3A719;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

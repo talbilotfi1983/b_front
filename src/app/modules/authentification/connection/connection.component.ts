@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ConnectionComponent implements OnInit {
   @Input() connection: any;
+  @Input() inscription: any;
   @Output() emitNoneDisplay: EventEmitter<any> = new EventEmitter();
 
   constructor() { }

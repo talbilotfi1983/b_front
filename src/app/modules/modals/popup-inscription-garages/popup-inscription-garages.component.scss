@@ -27,11 +27,17 @@
       padding: 20px;
 
       .contact-form-box {
+        #contact-form {
 
-        input[type=text]:focus,
-        input[type=password]:focus {
-          background-color: #ddd;
-          outline: none;
+          input[type=text]:focus,
+          input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+
+          #submit-contact {
+            padding: 8px 50px;
+          }
         }
 
       }
