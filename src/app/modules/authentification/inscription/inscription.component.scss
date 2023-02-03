@@ -61,10 +61,13 @@
             margin: 0 0 16px 0;
 
             .form-check {
-              width: 150px;
+              width: 130px;
 
-              .monsieur,
-              .madame,
+              #monsieur,
+              #madame {
+                margin: 0 10px 0 0 !important;
+              }
+
               label {
                 margin: 0 !important;
                 padding: 0 !important;
