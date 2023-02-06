@@ -444,70 +444,80 @@ header.active .nav-list-container {
   -o-transition: all 0.2s ease-in-out;
 }
 
-.navbar-nav .megadropdown .inner-megadropdown {
-  background: #fff;
-  border-top: 3px solid #E3A719;
-  margin-top: -1px;
-  overflow: hidden;
-  position: relative;
+.navbar {
+  --bs-navbar-nav-link-padding-x: 2rem !important;
 }
 
-.navbar-nav .megadropdown .inner-megadropdown .filter-block {
-  float: left;
-  width: 220px;
-  text-align: right;
-  height: 100%;
-}
+.navbar-nav {
+  .megadropdown {
+    .inner-megadropdown {
+      background: #fff;
+      border-top: 3px solid #E3A719;
+      margin-top: -1px;
+      overflow: hidden;
+      position: relative;
 
-.navbar-nav .megadropdown .inner-megadropdown .filter-block ul.filter-posts {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
+      .filter-block {
+        float: left;
+        width: 220px;
+        text-align: right;
+        height: 100%;
 
-.navbar-nav .megadropdown .inner-megadropdown .filter-block ul.filter-posts li {
-  display: block;
-}
+        ul {
+          .filter-posts {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            padding: 0;
+            display: block;
 
-.navbar-nav .megadropdown .inner-megadropdown .filter-block ul.filter-posts li a {
-  display: inline-block;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  display: block;
-  color: #999999;
-  font-size: 11px;
-  font-family: 'Myriad Pro', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 15px 20px;
-  background: #fafafa;
-  border-bottom: 1px solid #f2f2f2;
-}
+            li {
+              display: block;
 
-.navbar-nav .megadropdown .inner-megadropdown .filter-block ul.filter-posts li a:hover,
-.navbar-nav .megadropdown .inner-megadropdown .filter-block ul.filter-posts li a.active {
-  color: #E3A719;
-  background: #fff;
-}
+              a {
+                display: inline-block;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+                -moz-transition: all 0.2s ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+                -o-transition: all 0.2s ease-in-out;
+                display: block;
+                color: #999999;
+                font-size: 11px;
+                font-family: 'Myriad Pro', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding: 15px 20px;
+                background: #fafafa;
+                border-bottom: 1px solid #f2f2f2;
 
-.navbar-nav .megadropdown .inner-megadropdown .filter-block:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 100%;
-  background: #fafafa;
-}
+                &:hover,
+                &.active {
+                  color: #E3A719;
+                  background: #fff;
+                }
+              }
+            }
+          }
+        }
 
-.navbar-nav .megadropdown .inner-megadropdown .posts-filtered-block {
-  width: 920px;
-  float: right;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 220px;
+          height: 100%;
+          background: #fafafa;
+        }
+      }
+
+      .posts-filtered-block {
+        width: 920px;
+        float: right;
+      }
+    }
+  }
 }
 
 .navbar-nav .megadropdown .inner-megadropdown .posts-filtered-block>.owl-wrapper {
@@ -8830,5 +8840,12 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
   background-color: #E3A719;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
