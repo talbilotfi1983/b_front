@@ -3745,6 +3745,7 @@ ul.list-posts>li .post-content h2 a:hover {
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
+  background-color: #00000054;
 }
 
 .jante h2 a {
@@ -8873,14 +8874,4 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
 
 .navigation-dots .single-cube.active {
   background-color: #E3A719;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
