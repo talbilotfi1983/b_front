@@ -1,0 +1,1149 @@
+<!-- <div id="container">
+  <div class="block-wrapper">
+    <div class="container">
+      <div class="col-md-6">
+        <div class="home-top-content">
+          <div class="home-select-car">
+            <form action="#" data-page="main" id="top-select" method="get"
+              class="slt-form sidebar-select-car large-select select_search_form">
+              <input name="typeSelector" value="pkw" type="hidden" id="form_typeSelector"><input
+                name="selectorTypeElectric" value="" type="hidden" id="form_selectorTypeElectric">
+              <div class="clear"></div>
+
+
+              <div class="block-select-number">
+                <div class="block-select-number__title"><span>Saisie du numéro d'immatriculation</span></div>
+                <div class="block-select-number__row">
+                  <div class="block-select-number__number" data-country="f">
+                    <div id="kba-error-tooltip" class="popup-error-select validation-tooltip hidden">
+                      <a href="#" class="close"></a>
+                      <i class="icon-error"></i>
+                      <div>kba_error</div>
+                    </div>
+                    <input maxlength="12" type="text" placeholder="AB-123-CD" class="inp_text" id="kba1" name="kba"
+                      value="">
+                  </div>
+                  <div class="block-select-number__button"><a class="submit search_button kba_submit" href="#"><span
+                        class="lens">Rechercher</span></a></div>
+                </div>
+              </div>
+
+              <div id="selector-wrapper" class="block-select-car block-select-car-number">
+                <a id="reset_selector_form" class="block-select-car__update hidden" href="#"></a>
+                <div class="block-select-car__title">
+                  <strong>Démarrez votre recherche de pièces en sélectionnant une voiture</strong>
+                </div>
+                <div data-tooltip="tooltip-block" class="tooltip-block tooltip-block--left">
+                  <div id="maker-select" class="block-select-car__select slt-selectbox-wrapper filled">
+                    <span class="number">1</span>
+                    <select id="form_maker_id" name="maker_id">
+                      <option value="0">Choisissez une marque</option>
+                      <optgroup label="Constructeurs les plus vendus">
+                        <option value="93">RENAULT</option>
+                        <option value="88">PEUGEOT</option>
+                        <option value="121">VOLKSWAGEN</option>
+                        <option value="21">CITROЁN</option>
+                        <option value="74">MERCEDES-BENZ</option>
+                        <option value="84">OPEL</option>
+                        <option value="16" selected="">BMW</option>
+                        <option value="5">AUDI</option>
+                        <option value="36">FORD</option>
+                        <option value="35">FIAT</option>
+                      </optgroup>
+                      <optgroup label="Constructeurs de a à z">
+                        <option value="3854">ABARTH</option>
+                        <option value="609">AC</option>
+                        <option value="1505">ACURA</option>
+                        <option value="1480">AIXAM</option>
+                        <option value="2">ALFA ROMEO</option>
+                        <option value="866">ALPINA</option>
+                        <option value="810">ALPINE</option>
+                        <option value="4730">ALVIS</option>
+                        <option value="1360">ARO</option>
+                        <option value="3495">ARTEGA</option>
+                        <option value="879">ASIA MOTORS</option>
+                        <option value="2242">ASKAM (FARGO/DESOTO)</option>
+                        <option value="881">ASTON MARTIN</option>
+                        <option value="5">AUDI</option>
+                        <option value="6">AUSTIN</option>
+                        <option value="1538">AUSTIN-HEALEY</option>
+                        <option value="3">AUTO UNION</option>
+                        <option value="799">AUTOBIANCHI</option>
+                        <option value="2845">AUVERLAND</option>
+                        <option value="134">BARKAS</option>
+                        <option value="10">BEDFORD</option>
+                        <option value="815">BENTLEY</option>
+                        <option value="1485">BERTONE</option>
+                        <option value="3762">BESTURN (FAW)</option>
+                        <option value="16" selected="">BMW</option>
+                        <option value="136">BORGWARD</option>
+                        <option value="4161">BRABUS</option>
+                        <option value="788">BUGATTI</option>
+                        <option value="816">BUICK</option>
+                        <option value="3136">BUICK (SGM)</option>
+                        <option value="819">CADILLAC</option>
+                        <option value="1489">CARBODIES</option>
+                        <option value="2915">CASALINI</option>
+                        <option value="1490">CATERHAM</option>
+                        <option value="2887">CHERY</option>
+                        <option value="138">CHEVROLET</option>
+                        <option value="20">CHRYSLER</option>
+                        <option value="21">CITROЁN</option>
+                        <option value="4896">CUPRA</option>
+                        <option value="139">DACIA</option>
+                        <option value="185">DAEWOO</option>
+                        <option value="24">DAF</option>
+                        <option value="25">DAIHATSU</option>
+                        <option value="26">DAIMLER</option>
+                        <option value="1495">DE TOMASO</option>
+                        <option value="4269">DFSK</option>
+                        <option value="29">DODGE</option>
+                        <option value="3497">DR</option>
+                        <option value="4468">DS</option>
+                        <option value="142">EBRO</option>
+                        <option value="700">FERRARI</option>
+                        <option value="35">FIAT</option>
+                        <option value="3738">FISKER</option>
+                        <option value="36">FORD</option>
+                        <option value="2864">FORD ASIA / OCEANIA</option>
+                        <option value="808">FORD OTOSAN</option>
+                        <option value="776">FORD USA</option>
+                        <option value="775">FSO</option>
+                        <option value="148">GAZ</option>
+                        <option value="3697">GEELY (GLEAGLE)</option>
+                        <option value="4473">GENESIS</option>
+                        <option value="4657">GERMAN E-CARS</option>
+                        <option value="812">GLAS</option>
+                        <option value="39">GMC</option>
+                        <option value="4752">GOUPIL</option>
+                        <option value="2903">GREAT WALL</option>
+                        <option value="3968">HAVAL</option>
+                        <option value="801">HOLDEN</option>
+                        <option value="45">HONDA</option>
+                        <option value="1506">HUMMER</option>
+                        <option value="183">HYUNDAI</option>
+                        <option value="1507">INDIGO</option>
+                        <option value="1526">INFINITI</option>
+                        <option value="52">INNOCENTI</option>
+                        <option value="54">ISUZU</option>
+                        <option value="55">IVECO</option>
+                        <option value="56">JAGUAR</option>
+                        <option value="882">JEEP</option>
+                        <option value="2589">JIANGLING LANDWIND</option>
+                        <option value="2888">JINBEI</option>
+                        <option value="184">KIA</option>
+                        <option value="2760">KTM</option>
+                        <option value="63">LADA</option>
+                        <option value="701">LAMBORGHINI</option>
+                        <option value="64">LANCIA</option>
+                        <option value="1820">LAND ROVER</option>
+                        <option value="1380">LDV</option>
+                        <option value="5194">LEVC</option>
+                        <option value="842">LEXUS</option>
+                        <option value="1513">LIGIER</option>
+                        <option value="1200">LINCOLN</option>
+                        <option value="4187">LLOYD</option>
+                        <option value="802">LOTUS</option>
+                        <option value="3047">LTI</option>
+                        <option value="1280">MAHINDRA</option>
+                        <option value="69">MAN</option>
+                        <option value="908">MARUTI</option>
+                        <option value="771">MASERATI</option>
+                        <option value="2164">MAYBACH</option>
+                        <option value="72">MAZDA</option>
+                        <option value="1518">MCLAREN</option>
+                        <option value="845">MEGA</option>
+                        <option value="74">MERCEDES-BENZ</option>
+                        <option value="161">MERCURY</option>
+                        <option value="75">MG</option>
+                        <option value="3961">MIA ELECTRIC</option>
+                        <option value="4219">MICROCAR</option>
+                        <option value="1522">MINELLI</option>
+                        <option value="1523">MINI</option>
+                        <option value="77">MITSUBISHI</option>
+                        <option value="803">MORGAN</option>
+                        <option value="78">MORRIS</option>
+                        <option value="813">MOSKVICH</option>
+                        <option value="80">NISSAN</option>
+                        <option value="81">NSU</option>
+                        <option value="1141">OLDSMOBILE</option>
+                        <option value="84">OPEL</option>
+                        <option value="4164">PAGANI</option>
+                        <option value="1531">PANTHER</option>
+                        <option value="88">PEUGEOT</option>
+                        <option value="181">PIAGGIO</option>
+                        <option value="3046">PININFARINA</option>
+                        <option value="850">PLYMOUTH</option>
+                        <option value="4817">POLESTAR</option>
+                        <option value="774">PONTIAC</option>
+                        <option value="92">PORSCHE</option>
+                        <option value="778">PROTON</option>
+                        <option value="1580">PUCH</option>
+                        <option value="3689">RAM</option>
+                        <option value="93">RENAULT</option>
+                        <option value="694">RENAULT TRUCKS</option>
+                        <option value="705">ROLLS-ROYCE</option>
+                        <option value="95">ROVER</option>
+                        <option value="99">SAAB</option>
+                        <option value="171">SANTANA</option>
+                        <option value="1497">SATURN</option>
+                        <option value="2714">SCION</option>
+                        <option value="104">SEAT</option>
+                        <option value="1547">SHELBY</option>
+                        <option value="3156">SHUANGHUAN AUTO</option>
+                        <option value="106">SKODA</option>
+                        <option value="1138">SMART</option>
+                        <option value="175">SSANGYONG</option>
+                        <option value="176">STEYR</option>
+                        <option value="4015">STREETSCOOTER</option>
+                        <option value="107">SUBARU</option>
+                        <option value="109">SUZUKI</option>
+                        <option value="110">TALBOT</option>
+                        <option value="178">TATA (TELCO)</option>
+                        <option value="3328">TESLA</option>
+                        <option value="3514">THINK</option>
+                        <option value="111">TOYOTA</option>
+                        <option value="187">TRABANT</option>
+                        <option value="112">TRIUMPH</option>
+                        <option value="861">TVR</option>
+                        <option value="1553">UAZ</option>
+                        <option value="1554">UMM</option>
+                        <option value="117">VAUXHALL</option>
+                        <option value="4256">VICTORY</option>
+                        <option value="121">VOLKSWAGEN</option>
+                        <option value="120">VOLVO</option>
+                        <option value="186">WARTBURG</option>
+                        <option value="907">WESTFIELD</option>
+                        <option value="1558">WIESMANN</option>
+                        <option value="124">ZASTAVA</option>
+                        <option value="678">ZUENDAPP</option>
+                      </optgroup>
+                    </select>
+                    <span class="arrow"></span>
+                    <div id="selector-error-tooltip" class="popup-error-select validation-tooltip hidden">
+                      <a href="#" class="close"></a>
+                      <i class="icon-error"></i>
+                      <div>selector_error</div>
+                    </div>
+                  </div>
+
+                  <div id="model-select" class="block-select-car__select slt-selectbox-wrapper filled active">
+                    <div id="model-select-loader" class="models-loader"></div>
+                    <span class="number">2</span>
+                    <select id="form_model_id" name="model_id">
+                      <option value="0" selected="">Choisissez un modèle</option>
+                      <optgroup label="02">
+                        <option value="164">02 Berline (E10) (04/1966 - 07/1977)</option>
+                        <option value="1608">02 Cabriolet (E10) (12/1967 - 10/1975)</option>
+                        <option value="1602">02 Touring (E6) (01/1971 - 07/1975)</option>
+                      </optgroup>
+                      <optgroup label="340">
+                        <option value="37692">340 Berline (01/1950 - 01/1955)</option>
+                      </optgroup>
+                      <optgroup label="501">
+                        <option value="1642">501/3 (07/1952 - 01/1959)</option>
+                      </optgroup>
+                      <optgroup label="502">
+                        <option value="37691">502 Berline (09/1954 - 12/1963)</option>
+                      </optgroup>
+                      <optgroup label="503">
+                        <option value="3390">503 Décapotable (01/1957 - 05/1961)</option>
+                      </optgroup>
+                      <optgroup label="507">
+                        <option value="37690">507 Cabriolet (10/1956 - 07/1959)</option>
+                      </optgroup>
+                      <optgroup label="600">
+                        <option value="4002">600 (111) (12/1957 - 05/1961)</option>
+                      </optgroup>
+                      <optgroup label="700">
+                        <option value="2054">700 (107) (01/1959 - 11/1966)</option>
+                        <option value="4805">700 Coupé (08/1959 - 04/1964)</option>
+                      </optgroup>
+                      <optgroup label="1500-2000">
+                        <option value="187">1500-2000 (115, 116, 118, 121) (10/1962 - 11/1972)</option>
+                      </optgroup>
+                      <optgroup label="1600 GT">
+                        <option value="1640">1600 GT Coupé (10/1967 - 05/1969)</option>
+                      </optgroup>
+                      <optgroup label="2600-3200 V8">
+                        <option value="1641">2600-3200 V8 Coupe (10/1958 - 07/1966)</option>
+                      </optgroup>
+                      <optgroup label="E3">
+                        <option value="219">2500-3300 (E3) Berline (10/1968 - 04/1977)</option>
+                      </optgroup>
+                      <optgroup label="E9">
+                        <option value="224">2000-3200 (E9) Coupe (10/1965 - 03/1976)</option>
+                      </optgroup>
+                      <optgroup label="GLAS">
+                        <option value="36965">Glas (602) (09/1967 - 05/1968)</option>
+                      </optgroup>
+                      <optgroup label="i3">
+                        <option value="11443">i3 (I01) (08/2013 - ...)</option>
+                      </optgroup>
+                      <optgroup label="i4">
+                        <option value="42095">i4 (G26) (11/2021 - ...)</option>
+                      </optgroup>
+                      <optgroup label="i8">
+                        <option value="11902">i8 (I12) (03/2014 - ...)</option>
+                        <option value="38331">i8 Roadster (I15) (03/2018 - ...)</option>
+                      </optgroup>
+                      <optgroup label="ISETTA">
+                        <option value="1435">Isetta (100, 101, 102, 103) (01/1956 - 11/1963)</option>
+                      </optgroup>
+                      <optgroup label="iX">
+                        <option value="41979">iX (I20) (07/2021 - ...)</option>
+                      </optgroup>
+                      <optgroup label="iX3">
+                        <option value="40964">iX3 (G08) (09/2020 - ...)</option>
+                      </optgroup>
+                      <optgroup label="M1">
+                        <option value="1790">M1 (E26) (05/1979 - 05/1983)</option>
+                      </optgroup>
+                      <optgroup label="Série 1">
+                        <option value="10974">1 5 portes (E87) (02/2003 - 01/2013)</option>
+                        <option value="5114">1 3 portes (E81) (09/2006 - 12/2011)</option>
+                        <option value="6441">1 Coupe (E82) (10/2006 - 10/2013)</option>
+                        <option value="6713">1 Cabriolet (E88) (03/2008 - 12/2013)</option>
+                        <option value="9620">1 5 portes (F20) (11/2010 - 06/2019)</option>
+                        <option value="11003">1 3 portes (F21) (12/2011 - ...)</option>
+                        <option value="38789">1 (F52) Berline (01/2017 - ...)</option>
+                        <option value="39565">1 3/5 portes (F40) (07/2019 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 2">
+                        <option value="11599">2 Coupe (F22, F87) (10/2012 - ...)</option>
+                        <option value="12791">2 Active Tourer (F45) (11/2013 - ...)</option>
+                        <option value="13176">2 Cabriolet (F23) (03/2014 - ...)</option>
+                        <option value="13830">2 Gran Tourer (F46) (07/2014 - ...)</option>
+                        <option value="39800">2 Gran Coupe (F44) (11/2019 - ...)</option>
+                        <option value="41933">2 Coupé (G42) (08/2021 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 3">
+                        <option value="286">3 Berline (E21) (06/1975 - 03/1984)</option>
+                        <option value="290">3 Berline (E30) (09/1982 - 03/1992)</option>
+                        <option value="430">3 Cabriolet (E30) (12/1985 - 10/1993)</option>
+                        <option value="294">3 Touring (E30) (07/1987 - 10/1994)</option>
+                        <option value="304">3 Berline (E36) (09/1990 - 02/1998)</option>
+                        <option value="308">3 Coupe (E36) (03/1992 - 04/1999)</option>
+                        <option value="434">3 Cabriolet (E36) (03/1993 - 04/1999)</option>
+                        <option value="299">3 Compact (E36) (03/1994 - 08/2000)</option>
+                        <option value="1311">3 Touring (E36) (01/1995 - 10/1999)</option>
+                        <option value="3397">3 Berline (E46) (02/1998 - 04/2005)</option>
+                        <option value="3999">3 Coupe (E46) (02/1999 - 07/2006)</option>
+                        <option value="4088">3 Touring (E46) (10/1999 - 05/2005)</option>
+                        <option value="4571">3 Cabriolet (E46) (04/2000 - 12/2007)</option>
+                        <option value="4751">3 Compact (E46) (03/2001 - 02/2005)</option>
+                        <option value="5389">3 Berline (E90) (02/2004 - 12/2011)</option>
+                        <option value="5430">3 Touring (E91) (12/2004 - 06/2012)</option>
+                        <option value="5569">3 Coupe (E92) (01/2005 - 12/2013)</option>
+                        <option value="6241">3 Cabriolet (E93) (05/2006 - 12/2013)</option>
+                        <option value="9831">3 Berline (F30, F80) (03/2011 - 10/2018)</option>
+                        <option value="10266">3 Touring (F31) (07/2011 - 06/2019)</option>
+                        <option value="11207">3 GT (F34) (07/2012 - ...)</option>
+                        <option value="41814">3 Berline (G28) (07/2018 - ...)</option>
+                        <option value="39027">3 Berline (G20) (11/2018 - ...)</option>
+                        <option value="39625">3 Touring (G21) (07/2019 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 4">
+                        <option value="11300">4 Coupe (F32, F82) (07/2013 - ...)</option>
+                        <option value="11600">4 Cabriolet (F33, F83) (10/2013 - ...)</option>
+                        <option value="11900">4 Gran Coupe (F36) (03/2014 - ...)</option>
+                        <option value="40742">4 Coupe (G22, G82) (07/2020 - ...)</option>
+                        <option value="41276">4 Cabriolet (G23) (11/2020 - ...)</option>
+                        <option value="42096">4 Gran Coupé (G26) (07/2021 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 5">
+                        <option value="456">5 Berline (E12) (03/1972 - 08/1981)</option>
+                        <option value="452">5 Berline (E28) (06/1980 - 12/1987)</option>
+                        <option value="464">5 Berline (E34) (12/1987 - 11/1995)</option>
+                        <option value="459">5 Touring (E34) (11/1991 - 01/1997)</option>
+                        <option value="1449">5 Berline (E39) (09/1995 - 06/2003)</option>
+                        <option value="1892">5 Touring (E39) (09/1996 - 05/2004)</option>
+                        <option value="4993">5 Berline (E60) (12/2001 - 03/2010)</option>
+                        <option value="5079">5 Touring (E61) (03/2004 - 12/2010)</option>
+                        <option value="8541">5 Berline (F10) (01/2009 - 10/2016)</option>
+                        <option value="8274">5 GT (F07) (01/2009 - 02/2017)</option>
+                        <option value="8762">5 Touring (F11) (11/2009 - 02/2017)</option>
+                        <option value="37157">5 Berline (G30, F90) (09/2016 - ...)</option>
+                        <option value="37535">5 Touring (G31) (03/2017 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 6">
+                        <option value="486">6 Coupe (E24) (10/1975 - 04/1989)</option>
+                        <option value="5086">6 Coupe (E63) (01/2004 - 12/2010)</option>
+                        <option value="5087">6 Cabriolet (E64) (03/2004 - 12/2010)</option>
+                        <option value="9160">6 Coupe (F13) (11/2010 - 10/2017)</option>
+                        <option value="9159">6 Cabriolet (F12) (03/2011 - 06/2018)</option>
+                        <option value="11034">6 Gran Coupe (F06) (09/2011 - 10/2018)</option>
+                        <option value="38046">6 Gran Turismo (G32) (06/2017 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 7">
+                        <option value="539">7 (E23) (05/1977 - 04/1988)</option>
+                        <option value="544">7 (E32) (09/1986 - 10/1994)</option>
+                        <option value="549">7 (E38) (10/1994 - 11/2001)</option>
+                        <option value="4816">7 (E65, E66, E67) (11/2001 - 12/2009)</option>
+                        <option value="7864">7 (F01, F02, F03, F04) (02/2008 - 12/2015)</option>
+                        <option value="14283">7 (G11, G12) (10/2014 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Série 8">
+                        <option value="67">8 (E31) (04/1990 - 12/1999)</option>
+                        <option value="38775">8 Coupe (G15, F92) (07/2018 - ...)</option>
+                        <option value="39034">8 Cabriolet (G14, F91) (11/2018 - ...)</option>
+                        <option value="39628">8 Gran Coupe (G16, F93) (07/2019 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X1">
+                        <option value="8277">X1 (E84) (03/2009 - 06/2015)</option>
+                        <option value="14383">X1 (F48) (11/2014 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X2">
+                        <option value="38274">X2 (F39) (11/2017 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X3">
+                        <option value="5085">X3 (E83) (01/2003 - 12/2011)</option>
+                        <option value="8763">X3 (F25) (09/2010 - 08/2017)</option>
+                        <option value="38057">X3 (G01, F97) (10/2017 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X4">
+                        <option value="11945">X4 (F26) (05/2013 - 03/2018)</option>
+                        <option value="38487">X4 (G02, F98) (04/2018 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X5">
+                        <option value="4343">X5 (E53) (05/2000 - 02/2007)</option>
+                        <option value="6414">X5 (E70) (02/2006 - 06/2013)</option>
+                        <option value="11482">X5 (F15, F85) (06/2012 - 07/2018)</option>
+                        <option value="38751">X5 (G05) (08/2018 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X6">
+                        <option value="7378">X6 (E71, E72) (06/2007 - 06/2014)</option>
+                        <option value="12845">X6 (F16, F86) (08/2014 - 07/2019)</option>
+                        <option value="39650">X6 (G06, F96) (08/2019 - ...)</option>
+                      </optgroup>
+                      <optgroup label="X7">
+                        <option value="39060">X7 (G07) (03/2019 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Z1">
+                        <option value="138">Z1 Roadster (E30) (06/1988 - 06/1991)</option>
+                      </optgroup>
+                      <optgroup label="Z3">
+                        <option value="3483">Z3 Roadster (E36) (10/1995 - 01/2003)</option>
+                        <option value="2079">Z3 Coupe (E36) (04/1997 - 06/2003)</option>
+                      </optgroup>
+                      <optgroup label="Z4">
+                        <option value="4924">Z4 Roadster (E85) (02/2003 - 12/2009)</option>
+                        <option value="5516">Z4 Coupe (E86) (03/2006 - 01/2009)</option>
+                        <option value="8033">Z4 Roadster (E89) (05/2009 - 08/2016)</option>
+                        <option value="39028">Z4 Roadster (G29) (03/2019 - ...)</option>
+                      </optgroup>
+                      <optgroup label="Z8">
+                        <option value="4279">Z8 Roadster (E52) (06/2000 - 06/2003)</option>
+                      </optgroup>
+                    </select>
+                    <span class="arrow"></span>
+                    <div id="selector-error-tooltip-model" class="popup-error-select validation-tooltip hidden">
+                      <a href="#" class="close"></a>
+                      <i class="icon-error"></i>
+                      <div>selector_error</div>
+                    </div>
+                  </div>
+
+                  <div id="car-select" class="block-select-car__select slt-selectbox-wrapper">
+                    <div id="car-select-loader" class="cars-loader"></div>
+                    <span class="number">3</span>
+                    <select id="form_car_id" name="car_id">
+                      <option value="0" selected="">Choisissez une motorisation</option>
+                    </select>
+                    <span class="arrow"></span>
+                    <div id="selector-error-tooltip-car" class="popup-error-select validation-tooltip hidden">
+                      <a href="#" class="close"></a>
+                      <i class="icon-error"></i>
+                      <div>selector_error</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-select-car__button">
+                  <a class="submit search_button" href="#"><span class="lens">Rechercher</span></a>
+                </div>
+
+                <div class="selector-find-text js-select-kba-find ga-click" data-gac="Selector_pop-up"
+                  data-ga-action="Click">
+                  VOUS NE TROUVEZ PAS VOTRE VOITURE DANS LE CATALOGUE&nbsp;?</div>
+              </div>
+
+            </form>
+
+            <span class="warning-oem-position"></span>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-offset-1">
+
+      </div>
+      <div class="col-md-6">
+        <div id="container">
+          <section class="block-wrapper">
+            <div class="container">
+              <div class="row" style="display:flex ;">
+                <div class="col-md-5">1</div>
+                <div class="col-md-offset-1"></div>
+
+
+                <div class="col-md-6">
+
+                  <div class="wrapper">
+                    <div class="slider-container">
+                      <div class="slide-image">
+                        <img src="../../../assets/images/slider-api/banner_image__fr (1).jpg">
+                      </div>
+                      <div class="slide-image">
+                        <img src="../../../assets/images/slider-api/banner_image__fr (2).jpg">
+                      </div>
+                      <div class="slide-image">
+                        <img src="../../../assets/images/slider-api/banner_image__fr (3).jpg">
+                      </div>
+                      <div class="slide-image">
+                        <img src="../../../assets/images/slider-api/banner_image__fr (4).jpg">
+                      </div>
+                      <div class="slide-image">
+                        <img src="../../../assets/images/slider-api/banner_image__fr (5).jpg">
+                      </div>
+                      <div class="slide-image">
+                        <img src="../../../assets/images/slider-api/banner_image__fr.jpg">
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="navigation-dots">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideImage = document.querySelectorAll(".slide-image");
+  const slideContainer = document.querySelector(".slider-container");
+  const navigationDots = document.querySelector(".navigation-dots");
+
+  let numberOfImages = slideImage.length;
+  let slideWidth = slideImage[0].clientWidth;
+  let currentSlide = 0;
+
+  function init() {
+    slideImage.forEach((img, i) => {
+      img.style.left = i * 100 + "%";
+    });
+
+    slideImage[0].classList.add("active");
+
+    createNavigationDots();
+  }
+
+  init();
+
+  function createNavigationDots() {
+    for (let i = 0; i < numberOfImages; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("single-cube");
+      navigationDots.appendChild(dot);
+
+      dot.addEventListener("click", () => {
+        goToSlide(i);
+      })
+    }
+
+    navigationDots.children[0].classList.add("active");
+  }
+
+  function goToSlide(slideNumber) {
+    slideContainer.style.transform = "translateX(-" + slideWidth * slideNumber + "px)";
+    currentSlide = slideNumber;
+    setActiveClass();
+  }
+
+  function setActiveClass() {
+    let currentActive = document.querySelector(".slide-image.active");
+    currentActive.classList.remove("active");
+    slideImage[currentSlide].classList.add("active");
+
+    let currentDot = document.querySelector(".single-cube.active");
+    currentDot.classList.remove("active");
+    navigationDots.children[currentSlide].classList.add("active");
+  }
+</script> -->
+<!-- <style>
+
+.home-top-content {
+  padding: 0 50px 43px;
+  margin: 43px 0 9px;
+  border-bottom: 1px solid #e5e5e5;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -o-box-pack: justify;
+  justify-content: space-between;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+b,
+big,
+blockquote,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sup,
+table,
+tbody,
+tfoot,
+tt,
+u,
+ul,
+var {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: 0 0;
+}
+
+.sidebar-select-car {
+  margin: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.block-select-number {
+  background: #fafafa;
+  padding: 17px 25px 17px 17px;
+  margin-top: 10px;
+  border-top: 2px solid #0067d7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.block-select-car {
+  padding: 17px 25px 17px 17px;
+  border-top: 2px solid #0067d7;
+  position: relative;
+}
+
+.block-select-number__title {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #353535;
+  font-family: 'ProximaNova-SemiBold';
+  padding-bottom: 15px;
+  display: table;
+  padding-right: 25px;
+}
+
+.block-select-number__title:before {
+  content: '';
+  display: block;
+  vertical-align: top;
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -230px -574px;
+  width: 42px;
+  height: 27px;
+}
+
+.block-select-number__title span {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 3px;
+  padding-left: 15px;
+}
+
+.block-select-number__number {
+  position: relative;
+  background: -webkit-linear-gradient(top, #3677e4, #0068d7);
+  background: -moz-linear-gradient(top, #3677e4, #0068d7);
+  background: -o-linear-gradient(top, #3677e4, #0068d7);
+  background: -ms-linear-gradient(top, #3677e4, #0068d7);
+  background: linear-gradient(to bottom, #3677e4, #0068d7);
+  width: 223px;
+  height: 37px;
+}
+
+.block-select-number__number:before {
+  width: 15px;
+  height: 15px;
+  top: 4px;
+  left: 11px;
+  background: url('../../../assets/images/pneus/sprite-flag.png') -15px 0 no-repeat;
+}
+
+.block-select-number__number:before {
+  content: '';
+  position: absolute;
+  display: block;
+  letter-spacing: 0;
+}
+
+.popup-error-select {
+  width: calc(100% + 2px);
+  left: -1px;
+  color: #000;
+  font-size: 12px;
+  font-family: 'ProximaNova-Bold';
+  line-height: 1.3;
+  border: 1px solid red;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 100;
+  position: absolute;
+  background: #fff;
+  bottom: 100%;
+  margin-bottom: 8px;
+  padding: 10px 10px 10px 35px;
+  border-radius: 3px;
+}
+
+.block-select-number__number input {
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #346bdd;
+  height: 100%;
+  border-left-width: 36px;
+  border-right-width: 17px;
+}
+
+.popup-error-select i.icon-error {
+  display: block;
+  background-position: -409px -695px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 7px;
+}
+
+.block-select-car--orange .block-select-car__title:before,
+.block-select-kba--sidebar .block-select-kba__info a:before,
+.popup-error-select i.icon-error {
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -740px -87px;
+  width: 18px;
+  height: 18px;
+}
+
+.popup-error-select i.icon-error {
+  display: block;
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -74px -74px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  left: 7px;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+b,
+big,
+blockquote,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+dfn,
+div,
+dl,
+dt,
+em,
+fieldset,
+font,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+s,
+samp,
+small,
+span,
+strike,
+strong,
+sup,
+table,
+tbody,
+tfoot,
+tt,
+u,
+ul,
+var {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: 0 0;
+}
+
+.block-select-number__number:after {
+  content: 'F';
+  position: absolute;
+  display: block;
+  width: 35px;
+  bottom: 2px;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.block-select-number__number:after {
+  content: '';
+  letter-spacing: 0;
+}
+
+.block-select-number__button {
+  text-align: right;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: 15px;
+}
+
+.block-select-number__button .submit {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+  height: 37px;
+  line-height: 37px;
+  background: #0067d7;
+  font-family: 'ProximaNova-Light';
+  padding: 0 10px 0 28px;
+  border: 0;
+}
+
+.block-select-car__button .submit span,
+.block-select-kba__button .submit span,
+.block-select-number__button .submit span,
+.block-select-truck__button a span {
+  position: relative;
+}
+
+.block-select-number__button .submit span:before,
+.selector-inline__kba-row-button a span:before,
+.selector-inline__reg .selector-inline-button a span:before {
+  content: '';
+  display: block;
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -740px -191px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.block-select-number__button a span:before {
+  content: '';
+  display: block;
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -104px -74px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.block-select-car__update {
+  display: block;
+  position: absolute;
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -655px -622px;
+  width: 16px;
+  height: 15px;
+  right: 26px;
+  top: 21px;
+}
+
+.block-select-car__select.active span.number {
+  background: #0067d7;
+}
+
+.block-select-car__select select {
+  padding: 0 40px;
+  width: 100%;
+  height: 29px;
+  background: 0 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  position: relative;
+  z-index: 12;
+}
+
+.block-select-car__select.active span.arrow {
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -766px -370px;
+  width: 9px;
+  height: 15px;
+}
+
+.tooltip-block .tooltiptext-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.tooltip-block .tooltiptext-line {
+  font-size: 13px !important;
+  color: #fff !important;
+  font-family: 'ProximaNova-Regular' !important;
+}
+
+.block-select-car__select:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid #999;
+  z-index: 11;
+  border-top: 1px solid #999;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#car-select,
+#model-select,
+.version2 .cont.profile_mein_a .deposit .title {
+  position: relative;
+}
+
+.block-select-car__select {
+  border: 1px solid #dddee0;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 7px;
+}
+
+.block-select-car__select.active:before {
+  background: #424242;
+}
+
+.cars-loader,
+.models-loader {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-image: url('../../../assets/images/pneus/atd-spin.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  display: none;
+}
+
+.block-select-car__select.active:after {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+#car-select,
+#model-select,
+.version2 .cont.profile_mein_a .deposit .title {
+  position: relative;
+}
+
+.block-select-car__select:before {
+  right: -1px;
+  top: -1px;
+  position: absolute;
+  content: '';
+  display: block;
+  width: 34px;
+  height: 31px;
+  z-index: 10;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.cars-loader,
+.models-loader {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background-image: url('../../../assets/images/pneus/atd-spin.gif');
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  display: none;
+}
+
+.block-select-car__select span.arrow {
+  position: absolute;
+  right: -20px;
+  top: 6px;
+}
+
+.block-select-car__button {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.block-select-car__button .submit {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 10px 0 28px;
+  min-width: 122px;
+  border-radius: 3px;
+  height: 37px;
+  line-height: 37px;
+  background: #0067d7;
+  font-family: 'ProximaNova-Light';
+  text-align: center;
+  width: 100%;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.block-select-car__button .submit span,
+.block-select-kba__button .submit span,
+.block-select-number__button .submit span,
+.block-select-truck__button a span {
+  position: relative;
+}
+
+.block-select-car__button .submit span:before {
+  content: '';
+  display: block;
+  background-image: url('../../../assets/images/pneus/sprite_gulp.png');
+  background-position: -740px -191px;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: -22px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.sidebar-select-car .selector-find-text {
+  background: #fafafa;
+  padding: 0 25px 8px 17px;
+}
+
+.block-select-car .selector-find-text {
+  margin-top: 8px;
+  padding-left: 0 !important;
+}
+
+.selector-find-text {
+  font-size: 13px;
+  line-height: 16px;
+  font-family: 'ProximaNova-Bold';
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+</style> -->

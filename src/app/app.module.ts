@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConnectionComponent } from './modules/authentification/connection/connection.component';
@@ -18,7 +21,6 @@ import { JantesComponent } from './pages/home/jantes/jantes.component';
 import { PiecesComponent } from './pages/home/pieces/pieces.component';
 import { PneusComponent } from './pages/home/pneus/pneus.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +44,10 @@ import { SliderComponent } from './pages/home/slider/slider.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

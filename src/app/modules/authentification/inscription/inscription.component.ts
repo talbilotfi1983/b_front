@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-inscription',
@@ -7,9 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InscriptionComponent implements OnInit {
   @Input() inscription: any;
+  @Output() emitNoneDisplay: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-
+  // tslint:disable-next-line:typedef
+  closePopup() {
+    this.inscription = 'none';
+    this.emitNoneDisplay.emit(this.inscription);
+  }
 }

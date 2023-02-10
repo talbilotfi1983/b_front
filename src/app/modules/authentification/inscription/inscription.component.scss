@@ -1,0 +1,109 @@
+.modal-dialog {
+  img {
+    display: none;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    top: -45px;
+    left: 560px;
+    z-index: 1;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 540px;
+    padding: 20px 60px;
+
+    // Le bouton croix pour fermer
+    .close {
+      position: absolute;
+      right: 17px;
+      top: 8px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #00000080;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: #E3A719;
+      }
+    }
+
+    .block-content {
+      padding: 30px 0 0 !important;
+
+      .contact-form-box {
+        .title-section {
+          margin: 0 0 20px 0 !important;
+
+          // Titre
+          h1 {
+            span {
+              font-size: 25px;
+            }
+          }
+        }
+
+        #contact-form {
+          h3 {
+            font-size: 18px;
+            margin: -12px 0 25px 0;
+          }
+
+          // Civilité
+          .civilite {
+            font-size: 18px;
+            margin: 0 0 16px 0;
+
+            .form-check {
+              width: 130px;
+
+              #monsieur,
+              #madame {
+                margin: 0 10px 0 0 !important;
+              }
+
+              label {
+                margin: 0 !important;
+                padding: 0 !important;
+              }
+
+              input[type=checkbox],
+              input[type=radio] {
+                margin: 0 !important;
+              }
+            }
+          }
+
+          // Bouton checkbox
+          #fax {
+            width: 18px;
+            height: 18px;
+            margin: 0 !important;
+          }
+
+          .rgpd {
+            font-size: 12px;
+          }
+
+          // Bouton d'envoie
+          .btnEnvoie {
+            width: 100%;
+            margin: 30px 0 15px 0;
+          }
+
+          .forgotPassword {
+            font-size: 16px;
+            color: #3267d6;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

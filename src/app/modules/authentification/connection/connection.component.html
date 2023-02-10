@@ -25,19 +25,21 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="d-flex align-items-center col-md-6">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
                 <input id="fax" name="fax" type="checkbox">&nbsp;&nbsp;
-                <span>Se souvenir de moi</span>
+                <span class="seSouvenir">Se souvenir de moi</span>
               </div>
-              <div class="col-md-6">
-                <span class="txt-small champsObligatoires">* Champs obligatoires</span>
-              </div>
+              <span class="txt-small champsObligatoires">* Champs obligatoires</span>
             </div>
 
             <button id="bouton" class="btn btn-outline-secondary btnEnvoie" type="submit">
               <i class="fas fa-paper-plane"></i> Connexion
             </button>
+            <p class="text-center forgotPassword"><a href="#">Mot de passe oublié ?</a></p>
+            <p>Ne disposez pas d'un compte BOBO PNEUS EQUIPEMENTS ?
+              <a href="#" (click)="inscription = 'block'">INSCRIVEZ-VOUS</a> maintenant.
+            </p>
           </form>
         </div>
         <!-- End contact form box -->
@@ -46,3 +48,7 @@
     </div>
   </div>
 </div>
+<!-- Page inscription -->
+<app-inscription *ngIf="this.inscription === 'block'" [inscription]="this.inscription"
+  (emitNoneDisplay)="inscription = 'none'">
+</app-inscription>

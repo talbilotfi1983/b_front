@@ -1,3 +1,61 @@
-<p>
-  inscription works!
-</p>
+<!-- End Top line -->
+<div class="overlay" tabindex="-1" role="dialog" [ngStyle]="{'display':inscription}">
+  <div class="modal-dialog">
+    <img class="position-absolute" src="../../../../assets/images/users/grand.jpg" alt="Users" class="rounded-circle">
+    <div class="modal-content">
+      <span class="close" title="Close Modal" (click)="closePopup()">&times;</span>
+      <!-- block-wrapper-section -->
+      <div class="block-content">
+        <!-- contact form box -->
+        <div class="contact-form-box">
+          <div class="title-section">
+            <h1 class="text-center"><span> DEVENIR UN NOUVEAU CLIENT ?</span></h1>
+          </div>
+          <form id="contact-form">
+            <h3>Inscrivez-vous en une seule étape</h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="d-flex align-items-center civilite">
+                  <span>Civilité * : </span>&nbsp;&nbsp;
+                  <div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="monsieur"
+                        value="option1">
+                      <label class="form-check-label" for="monsieur">Monsieur</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="madame"
+                        value="option2">
+                      <label class="form-check-label" for="madame">Madame</label>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-12">
+                <input id="prenom" placeholder="Prénom *" name="prenom" type="text" required>
+                <input id="nom" placeholder="Nom *" name="nom" type="text" required>
+                <input id="telephone" placeholder="Numéro de téléphone *" name="telephone" type="text" required>
+                <input id="courriel" placeholder="Adresse électronique *" name="email" type="email" required>
+                <input id="adresse" placeholder="Adresse physique *" name="adresse" type="text" required>
+                <input id="cp" placeholder="Code postal *" name="cp" type="text" required>
+                <input id="ville" placeholder="Ville *" name="ville" type="text" required>
+              </div>
+              <div class="col-md-12">
+                <p class="rgpd"><strong>Je confirme avoir lu et accepté la présente<a href="#" target="_blank">
+                      politique de
+                      confidentialité</a></strong></p>
+              </div>
+            </div>
+
+            <button id="bouton" class="btn btn-outline-secondary btnEnvoie" type="submit">
+              <i class="fas fa-paper-plane"></i> Je m'inscris
+            </button>
+          </form>
+        </div>
+        <!-- End contact form box -->
+      </div>
+      <!-- End block-wrapper-section -->
+    </div>
+  </div>
+</div>

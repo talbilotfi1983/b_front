@@ -16,35 +16,34 @@
           </div>
           <form id="contact-form" method="POST" action="" enctype="multipart/form-data">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="nomGaragePart" name="nom_garage" type="text" placeholder="Nom de garage*" required>
                 <div id="error_nomGarage" class="invalid-feedback"> Veuillez entrez un nom de garage . </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="adresseGaragePart" name="adresse_garage" type="text" placeholder="Adresse du garage*"
                   required>
                 <div id="error_adresseGarage" class="invalid-feedback"> Veuillez entrer un nom de garage . </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="villeintervention" name="ville_garage" type="text" placeholder="Ville(s) d'intervention*"
                   required>
                 <div id="error_intervention" class="invalid-feedback"> Veuillez faire un choix d'intervention .</div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="phoneGaragePart" name="telephone_garage" type="text" placeholder="Numéro de téléphone*">
                 <div id="error_phone" class="invalid-feedback"> Veuillez entrez un N° valide . </div>
 
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="emailGarage" name="email_garage" type="text" placeholder="Votre adresse mail*" required>
                 <div id="errorEmailGarage" class="invalid-feedback"> Veuillez vérifier votre adresse E-mail . </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="prix" name="prix_garage" type="int" placeholder="Prix*" required>
                 <div id="error_prix" class="invalid-feedback"> Veuillez entrez votre prix </div>
-
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <select id="lieuDintervention" class="formSelectPieceSurface" name="lieu_intervation_garage">
                   <option value="À domicile" disabled>Lieu d'intervention*</option>
                   <option value="À domicile">À domicile</option>
@@ -55,13 +54,12 @@
                   <option value="Dans un rayon de 100km ou +">Dans un rayon de 100km ou +</option>
                 </select>
                 <div id="error_lieu" class="invalid-feedback"> Veuillez choisir un lieu d'intervention. </div>
-
               </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                 <input id="diametre" name="diametre_pneu" type="text" placeholder='Diamètre maximum en pouce*' required>
                 <div id="error_diametre" class="invalid-feedback"> Veuillez choisir le diametre des pneus . </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-12">
                 <input id="mail" placeholder="Logo du (garage ou entreprise)*" name="logo_garage" type="file">
               </div>
               <div class="col-md-12">
