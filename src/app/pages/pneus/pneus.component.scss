@@ -2,9 +2,16 @@
   margin: -20px 0 0 0;
 }
 
+// Filtre type des pneus
 .sidebar {
   max-width: 1320px;
   margin: auto;
+
+  .title-section {
+    .titleBoutique {
+      font-size: 30px;
+    }
+  }
 
   .tab-posts-widget {
 
@@ -82,7 +89,29 @@
         }
       }
     }
+  }
+}
 
+// Type de pneus
+.container {
+  .block-content {
+    .wide-version {
 
+      // Titre
+      .title-section {
+        h1 {
+          font-size: 30px;
+        }
+      }
+
+      .typePneus {
+        width: 48px;
+        height: 48px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 90px;
+      }
+    }
   }
 }
