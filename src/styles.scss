@@ -8209,6 +8209,12 @@ li {
 
 }
 
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 0 !important;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     max-width: 767px !important;
