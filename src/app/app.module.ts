@@ -1,26 +1,32 @@
-import { NgModule } from '@angular/core';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ConnectionComponent } from './modules/authentification/connection/connection.component';
-import { InscriptionComponent } from './modules/authentification/inscription/inscription.component';
-import { FooterComponent } from './modules/footer/footer.component';
-import { HeaderComponent } from './modules/header/header.component';
-import { PopupGaragesComponent } from './modules/modals/popup-garages/popup-garages.component';
-import { PopupInscriptionGaragesComponent } from './modules/modals/popup-inscription-garages/popup-inscription-garages.component';
-import { NavComponent } from './modules/nav/nav.component';
-import { P404Component } from './modules/p404/p404.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { GaragesPartenairesComponent } from './pages/garages-partenaires/garages-partenaires.component';
-import { EquipementsComponent } from './pages/home/equipements/equipements.component';
-import { HomeComponent } from './pages/home/home.component';
-import { JantesComponent } from './pages/home/jantes/jantes.component';
-import { PiecesComponent } from './pages/home/pieces/pieces.component';
-import { PneusComponent } from './pages/home/pneus/pneus.component';
-import { SliderComponent } from './pages/home/slider/slider.component';
+import {NgModule} from '@angular/core';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ConnectionComponent} from './modules/authentification/connection/connection.component';
+import {InscriptionComponent} from './modules/authentification/inscription/inscription.component';
+import {FooterComponent} from './modules/footer/footer.component';
+import {HeaderComponent} from './modules/header/header.component';
+import {PopupGaragesComponent} from './modules/modals/popup-garages/popup-garages.component';
+import {
+  PopupInscriptionGaragesComponent
+} from './modules/modals/popup-inscription-garages/popup-inscription-garages.component';
+import {NavComponent} from './modules/nav/nav.component';
+import {P404Component} from './modules/p404/p404.component';
+import {ContactComponent} from './pages/contact/contact.component';
+import {GaragesPartenairesComponent} from './pages/garages-partenaires/garages-partenaires.component';
+import {EquipementsComponent} from './pages/home/equipements/equipements.component';
+import {HomeComponent} from './pages/home/home.component';
+import {JantesComponent} from './pages/home/jantes/jantes.component';
+import {PiecesComponent} from './pages/home/pieces/pieces.component';
+import {PneusComponent} from './pages/home/pneus/pneus.component';
+import {SliderComponent} from './pages/home/slider/slider.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import { MonEspaceComponent } from './pages/mon-espace/mon-espace.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,16 +46,21 @@ import { SliderComponent } from './pages/home/slider/slider.component';
     PopupInscriptionGaragesComponent,
     PopupGaragesComponent,
     ConnectionComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    MonEspaceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MatRadioModule
+    MatRadioModule,
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

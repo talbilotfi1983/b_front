@@ -3,14 +3,18 @@ import {AuthentificationService} from "../../../services/authentification.servic
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-mon-espace',
+  templateUrl: './mon-espace.component.html',
+  styleUrls: ['./mon-espace.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class MonEspaceComponent implements OnInit {
 
   constructor(private authentificationService: AuthentificationService, private router: Router) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    if (!this.authentificationService.cheekLoging()) {
+      this.router.navigateByUrl('')
+    }
   }
 }
