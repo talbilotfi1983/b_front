@@ -11,18 +11,16 @@
           <div class="title-section">
             <h1 class="text-center"><span>Connexion</span></h1>
           </div>
-          <form id="contact-form" [formGroup]="userConnexion" (ngSubmit)="onLogin()">
+          <form id="contact-form">
             <h3>Entrez votre adresse e-mail et votre mot de passe</h3>
             <div class="row">
               <div class="col-md-12">
-                <input id="courriel" placeholder="Adresse électronique *" name="email" type="email" required
-                       formControlName="email">
-                <div *ngIf="userConnexion.controls.email?.errors && isSubmit">Veuillez vérifier votre adresse e-mail</div>
+                <input id="courriel" placeholder="Adresse électronique *" name="email" type="email" required>
+                <div id="error_email" class="invalid-feedback">Veuillez vérifier votre adresse e-mail </div>
               </div>
               <div class="col-md-12">
-                <input id="telephone_contact" placeholder="Mot de passe *" name="password" type="password" required
-                       formControlName="password">
-                <div  *ngIf="userConnexion.controls.password?.errors && isSubmit">
+                <input id="telephone_contact" placeholder="Mot de passe *" name="telephone" type="text" required>
+                <div id="error_telephone" class="invalid-feedback">
                   Veuillez vérifier votre mot de passe
                 </div>
               </div>
@@ -34,10 +32,7 @@
               </div>
               <span class="txt-small champsObligatoires">* Champs obligatoires</span>
             </div>
-            <p *ngIf="errorMsg">
-              Votre compte ou mot de passe est incorrect. Si vous avez oublié votre mot de passe,
-              <a href="#">réinitialisez-le maintenant.</a>
-            </p>
+
             <button id="bouton" class="btn btn-outline-secondary btnEnvoie" type="submit">
               <i class="fas fa-paper-plane"></i> Connexion
             </button>
@@ -55,5 +50,5 @@
 </div>
 <!-- Page inscription -->
 <app-inscription *ngIf="this.inscription === 'block'" [inscription]="this.inscription"
-                 (emitNoneDisplay)="inscription = 'none'">
+  (emitNoneDisplay)="inscription = 'none'">
 </app-inscription>

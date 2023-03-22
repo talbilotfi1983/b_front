@@ -1,6 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {AuthentificationService} from "../../../services/authentification.service";
-import {Router} from "@angular/router";
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -10,26 +8,9 @@ export class NavComponent implements OnInit {
   @Input() inscriptionGarages: any;
   @Input() connection: any;
   @Input() inscription: any;
-  isLogged: any;
-
-  constructor(private authentificationService: AuthentificationService, private router: Router) {
-  }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  loginOut() {
-    this.isLogged = this.authentificationService.cheekLoging();
-    if (this.isLogged) {
-      localStorage.removeItem('user')
-      this.router.navigateByUrl('/')
-    } else {
-      this.connection = 'block'
-    }
-  }
-
-
-  getLogged() {
-    return this.authentificationService.cheekLoging();
-  }
 }
