@@ -27,6 +27,17 @@ export class AuthentificationService {
     });
   }
 
+  // tslint:disable-next-line:typedef
+  inscription(payload: any) {
+    const httpOptions = {
+      // application: this.app,
+    };
+    return this.http.post(this.host + 'garage/add', payload, {
+      observe: 'response',
+      headers: httpOptions
+    });
+  }
+
   getToken() {
     const user = JSON.parse(localStorage.getItem('user') as string);
     return user?.token;
