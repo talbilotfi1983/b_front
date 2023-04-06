@@ -5627,7 +5627,7 @@ ul.autor-list>li:hover .autor-box {
     .first-col,
     .second-col,
     .third-col {
-      width: 30%;
+      width: 100%;
 
       span {
         color: #222222;
@@ -8881,4 +8881,13 @@ header .list-line-posts div.list-post .post-content h2 a:hover {
 
 .navigation-dots .single-cube.active {
   background-color: #E3A719;
+}
+
+app-mon-espace {
+  .monEspace {
+    width: 31.333333% !important;
+    border: 2px solid #f5a501;
+    padding: 0 !important;
+    margin: auto auto 30px auto !important;
+  }
 }
