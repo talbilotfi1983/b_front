@@ -32,4 +32,5 @@ export class NavComponent implements OnInit {
   getLogged() {
     return this.authentificationService.cheekLoging();
   }
+
 }

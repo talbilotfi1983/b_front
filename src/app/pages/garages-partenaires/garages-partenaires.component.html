@@ -41,39 +41,31 @@
               <div class="title-section">
                 <h1><span>Nos garages partenaires</span></h1>
               </div>
-              <div class="news-post article-post">
-                <div class="row">
+              <div class="news-post article-post" >
+                <div class="row" *ngFor="let coordonneeGarage of params.coordonneeGarages" >
                   <div class="col-sm-2">
                     <div class="post-gallery">
-                      <img src="../../../assets/images/logo/1623246091coffee-819362_640.jpg" alt="Audi">
+                      <img [src]="coordonneeGarage.garage.logo" alt="Audi">
                     </div>
                   </div>
                   <div class=" info col-sm-10">
                     <div class="post-content">
-                      <h2><a href="#">Audi</a></h2>
+                      <h2><a (click)="garages = 'block'">{{coordonneeGarage.garage.name}}</a></h2>
                       <ul class="post-tags">
-                        <li><i class="fas fa-phone"></i>Tél : <a href="tel:06 00 00 00 00">06 00 00 00 00</a></li>
-                        <li><i class="far fa-envelope"></i>Email : <a href="mailto:mail@mail.fr">mail@mail.fr</a></li>
+                        <li><i class="fas fa-phone"></i>Tél : <a href="tel:{{coordonneeGarage.mobile}}">{{coordonneeGarage.mobile}}</a></li>
+                        <li><i class="far fa-envelope"></i>Email : <a href="mailto:{{coordonneeGarage.email}}">{{coordonneeGarage.email}}</a></li>
                         <li><i class="fas fa-hand-holding-usd"></i>
-                          A partir de : <span>20 € </span></li><br />
+                          A partir de : <span>{{coordonneeGarage.garage.price}} € </span></li><br />
                         <li><i class="fas fa-circle-notch"></i>
-                          Diamètre maxi : 10"
+                          Diamètre maxi : {{coordonneeGarage.garage.tire_size}}"
                         </li>
                         <li><i class="far fa-clock"></i>
-                          Partenaire depuis : 17-09-2020 11:21:07
-                        </li>
-                        <li>
-                          <span class="post-rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                          </span>
+                          Partenaire depuis : {{coordonneeGarage.garage.createdAt}}
                         </li>
                       </ul>
                       <div class="detailsGaragesPartenaires">
                         <p><i class="fas fa-map-marker-alt"></i>
-                          <a target="_black" href="#"> 28 rue pierre joseph 28500 vernouillet</a>
+                          <a target="_black" href="#"> {{coordonneeGarage.address}} {{coordonneeGarage.zip}} {{coordonneeGarage.city}}</a>
                         </p>
                         <button type="button" class="btn btn-outline-secondary btnPlusDetails"
                           (click)="garages = 'block'"> Plus de détails

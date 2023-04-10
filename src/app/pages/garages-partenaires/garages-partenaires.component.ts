@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {GarageService} from "../../../services/garage.service";
 
 @Component({
   selector: 'app-garages-partenaires',
@@ -6,9 +7,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GaragesPartenairesComponent implements OnInit {
   @Input() garages: any;
-  constructor() { }
+  params = {
+    coordonneeGarages: undefined
+  };
+
+  constructor(private garageService: GarageService) {
+  }
 
   ngOnInit() {
+    this.garageService.coordonneeGarages().subscribe(data => {
+      // @ts-ignore
+      this.params.coordonneeGarages = data.body
+    })
   }
 
 }

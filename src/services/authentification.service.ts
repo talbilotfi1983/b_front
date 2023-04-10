@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {environment} from "../environments/environment";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -36,6 +36,11 @@ export class AuthentificationService {
       observe: 'response',
       headers: httpOptions
     });
+  }
+
+  // tslint:disable-next-line:typedef
+  addLogo(payload: any) {
+    return this.http.put(this.host + `garage/upload/${payload.id}`, payload.formData);
   }
 
   getToken() {

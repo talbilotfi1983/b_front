@@ -24,17 +24,17 @@ export class PopupInscriptionGaragesComponent implements OnInit {
         'Dans un rayon de 75km', 'Dans un rayon de 100km ou +']
     };
     this.userRegister = this.formBuilder.group({
-      nom_garage: ['', Validators.required],
-      ville_garage: ['', Validators.required],
-      adresse_garage: ['', Validators.required],
-      telephone_garage: ['', Validators.required],
-      prix_garage: ['', Validators.required],
-      email_garage: ['', Validators.required],
-      lieu_intervation_garage: ['', Validators.required],
-      diametre_pneu: ['', Validators.required],
-      logo_garage: ['', Validators.required],
+      name: ['', Validators.required],
+      city: ['', Validators.required],
+      zip: ['', Validators.required],
+      address: ['', Validators.required],
+      mobile: ['', Validators.required],
+      price: ['', Validators.required],
+      email: ['', Validators.required],
+      intervention_address: ['', Validators.required],
+      tire_size: ['', Validators.required],
       observation: ['', Validators.required],
-      mot_de_passe: ['', Validators.required]
+      password: ['', Validators.required]
     });
   }
 
@@ -45,14 +45,33 @@ export class PopupInscriptionGaragesComponent implements OnInit {
   }
 
   onRegister() {
-    this.authentificationService.inscription(this.userRegister.value).subscribe(() => {
-      console.log('inscription reussi ac success')
+    if (this.userRegister.invalid) {
+      return;
+    }
+    this.authentificationService.inscription(this.userRegister.value).subscribe(data => {
+      let params = {}
+      const formData: FormData = new FormData();
+      formData.append('images', this.paramsForm.files[0]);
+      // @ts-ignore
+      params.id = data.body.garage._id
+      // @ts-ignore
+      params.formData = formData;
+      this.authentificationService.addLogo(params).subscribe(data => {
+        this.emitNoneDisplay.emit();
+      })
     }, error => {
       console.error('inscription error')
     })
   }
 
   onSelectDistance(distance: any) {
-    this.userRegister.controls.lieu_intervation_garage.setValue(distance.value)
+    this.userRegister.controls.intervention_address.setValue(distance.value)
+  }
+
+  onFileChange(event: any) {
+    if (event.target.files.length > 0) {
+      // @ts-ignore
+      this.paramsForm.files = (event.target as HTMLInputElement).files;
+    }
   }
 }
