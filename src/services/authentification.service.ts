@@ -42,7 +42,10 @@ export class AuthentificationService {
   addLogo(payload: any) {
     return this.http.put(this.host + `garage/upload/${payload.id}`, payload.formData);
   }
-
+ // tslint:disable-next-line:typedef
+  contactAdmin(payload: any) {
+    return this.http.post(this.host + 'user/contactAdmin', payload);
+  }
   getToken() {
     const user = JSON.parse(localStorage.getItem('user') as string);
     return user?.token;

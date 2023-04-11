@@ -10,7 +10,7 @@
             <div class="title-section">
               <h1><span>Remplisser ce formulaire de contact !</span></h1>
             </div>
-            <form id="contact-form">
+            <form id="contact-form" [formGroup]="usersFormContact" (ngSubmit)="onContact()">
               <div class="row">
                 <div class="col-md-4">
                   <label for="civilite">Civilité *</label>
@@ -20,14 +20,15 @@
                     <option value="Mlle">Mlle</option>
                   </select>
                 </div>
+
                 <div class="col-md-4">
-                  <label for="nom">Nom *</label>
-                  <input id="nom_contact" name="nom" type="text" required>
+                  <label for="nom_contact">Nom *</label>
+                  <input id="nom_contact" name="lastname" formControlName="lastname" type="text" required>
                   <div id="error_nom" class="invalid-feedback">Veuillez entrer votre nom</div>
                 </div>
                 <div class="col-md-4">
                   <label for="prenom">Prenom *</label>
-                  <input id="prenom" name="prenom" type="text" required>
+                  <input id="prenom" name="firstname" formControlName="firstname" type="text" required>
                   <div id="error_prenom" class="invalid-feedback">Veuillez entrer votre prénom</div>
                 </div>
               </div>
@@ -35,59 +36,55 @@
               <div class="row">
                 <div class="col-md-4">
                   <label for="email">Courriel *</label>
-                  <input id="courriel" id="email" name="emailcontact" type="text" required>
-                  <div id="error_email" class="invalid-feedback">Veuillez vérifier votre adresse E-mail </div>
+                  <input id="courriel" id="email" name="email" formControlName="email" type="text" required>
+                  <div id="error_email" class="invalid-feedback">Veuillez vérifier votre adresse E-mail</div>
                 </div>
+
                 <div class="col-md-4">
-                  <label for="telephone">Téléphone *</label>
-                  <input id="telephone_contact" name="telephone" type="text" min="10" required>
+                  <label for="telephone_contact">Téléphone *</label>
+                  <input id="telephone_contact" name="mobile" formControlName="mobile" type="text" min="10" required>
                   <div id="error_telephone" class="invalid-feedback">Veuillez vérifier le format de votre N° de
                     téléphone
                   </div>
                 </div>
                 <div class="col-md-4">
                   <label for="fax">Fax</label>
-                  <input id="fax" name="fax" type="text">
+                  <input id="fax" name="fax" formControlName="fax" type="text">
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-4">
                   <label for="adresse">Adresse *</label>
-                  <input id="adresse" name="adresse" type="text" required>
-                  <div id="error_adress" class="invalid-feedback">Veuillez entrer votre adresse </div>
+                  <input id="adresse" name="address" formControlName="address" type="text" required>
+                  <div id="error_adress" class="invalid-feedback">Veuillez entrer votre adresse</div>
                 </div>
                 <div class="col-md-4">
-                  <label for="CP">Code postal *</label>
-                  <input id="codePostal" name="cp" type="text" required>
+                  <label for="codePostal">Code postal *</label>
+                  <input id="codePostal" name="zip" formControlName="zip" type="text" required>
                   <div id="error_codePostal" class="invalid-feedback">Veuillez entrer un code postal</div>
                 </div>
                 <div class="col-md-4">
-                  <label for="telephone">Ville *</label>
-                  <input id="ville" name="ville" type="text" required>
+                  <label for="ville">Ville *</label>
+                  <input id="ville" name="city" formControlName="city" type="text" required>
                   <div id="error_ville" class="invalid-feedback">Veuillez entrer votre ville</div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6">
                   <label for="garage">Garage</label>
-                  <input id="garage" name="garage" type="text">
+                  <input id="garage" name="garage" formControlName="garage" type="text">
                 </div>
                 <div class="col-md-6">
-                  <label for="CP">Sujet *</label>
-                  <input id="sujet" name="sujet" type="text" required>
-                  <div id="error_sujet" class="invalid-feedback">Veuillez entrer un sujet </div>
+                  <label for="sujet">Sujet *</label>
+                  <input id="sujet" name="subject" formControlName="subject" type="text" required>
+                  <div id="error_sujet" class="invalid-feedback">Veuillez entrer un sujet</div>
                 </div>
               </div>
               <label for="message">Message *</label>
-              <textarea id="message" name="message" required></textarea>
+              <textarea id="message" name="message" formControlName="message" required></textarea>
               <span class="txt-small champsObligatoires">* Champs obligatoires</span>
-              <!-- id="captcha" -->
-              <div class="g-recaptcha" data-sitekey="6Lc1zDocAAAAAIXP0wNP3_M4r0i6g2smrImsbipO" data-callback='onSubmit'
-                data-action='submit'> </div>
-              <span class="captcha" id="captcha"></span>
-              <button id="bouton" onclick='validate()' name="contact" class="btn btn-outline-secondary btnEnvoie"
-                type="submit">
+              <button id="bouton" type="submit" form="contact-form" class="btn btn-outline-secondary btnEnvoie">
                 <i class="fas fa-paper-plane"></i> Envoyer
               </button>
             </form>
@@ -131,11 +128,11 @@
               <form method="POST" action="../bd/newsletter.php" class="subscribe-form">
 
                 <h1>Votre newsletter</h1>
-                <input id="news" type="text" name="email" id="subscribe" placeholder="Email" required />
+                <input id="news" type="text" name="email" id="subscribe" placeholder="Email" required/>
                 <button type="submit" id="submit-subscribe" onclick='validateNewsletter()' name="newsletter">
                   <i class="fa fa-arrow-circle-right"></i>
                 </button>
-                <div id="error_news" class="invalid-feedback">Veuillez vérifier votre adresse E-mail </div>
+                <div id="error_news" class="invalid-feedback">Veuillez vérifier votre adresse E-mail</div>
 
                 <p style="text-align: justify">En vous abonant vous acceptez de recevoir l'infolettre contenant les
                   offres
