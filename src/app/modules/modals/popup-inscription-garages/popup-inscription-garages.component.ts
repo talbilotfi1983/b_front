@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
-import {AuthentificationService} from "../../../../services/authentification.service";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, Validators } from "@angular/forms";
+import { AuthentificationService } from "../../../../services/authentification.service";
 
 @Component({
   selector: 'app-popup-inscription-garages',
