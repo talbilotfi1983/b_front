@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthentificationService} from "../../../services/authentification.service";
-import {Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthentificationService } from "../../../services/authentification.service";
 
 @Component({
   selector: 'app-mon-espace',
@@ -16,5 +16,18 @@ export class MonEspaceComponent implements OnInit {
     if (!this.authentificationService.cheekLoging()) {
       this.router.navigateByUrl('')
     }
+  }
+
+  params = {
+    labels: ['Référence', 'Quantité', 'Total', 'Facture', 'Date de livraison estimée'],
+    datas: [
+      ['Infinity Ecosis 185/60 R15 88H XL', 1, '65,50 €', 'FR - 1021 - 71856	18', '12 octobre 2021'],
+      ['Infinity Ecosis 185/60 R15 88H XL', 51, '65,50 €', 'FR - 1021 - 71856	18', '12 octobre 2021'],
+      ['Infinity Ecosis 185/60 R15 88H XL', 100, '65,50 €', 'FR - 1021 - 71856	18', '12 octobre 2021']
+    ]
+  };
+
+  getFacture(d: any, j: number) {
+    console.log(d, j);
   }
 }

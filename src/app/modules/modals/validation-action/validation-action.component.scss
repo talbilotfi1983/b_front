@@ -1,0 +1,47 @@
+// Succès + Suppression
+.designSuccess,
+.designDelete {
+  padding: 10px 0 10px 10px;
+  width: 414px;
+  height: 40px;
+  border-radius: 5px;
+
+  // Message
+  p {
+    margin: 0 0 0 10px;
+  }
+
+  // Boutton close
+  .closeSuccess,
+  .closeDelete {
+    color: white;
+    padding: 10px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+}
+
+// Succès
+.designSuccess {
+  box-shadow: 0 0 20px 0 rgba(84, 138, 17, 0.6);
+  background-color: #78be21;
+
+  &:hover {
+    .closeSuccess {
+      background-color: #548a11;
+    }
+  }
+}
+
+// Suppression
+.designDelete {
+  box-shadow: 0 0 20px 0 rgba(156, 44, 44, 0.6);
+  background-color: #e15c5c;
+
+  &:hover {
+    .closeDelete {
+      background-color: #9c2c2c;
+    }
+  }
+}

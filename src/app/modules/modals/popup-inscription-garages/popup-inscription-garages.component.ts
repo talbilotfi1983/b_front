@@ -1,6 +1,8 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
-import {AuthentificationService} from "../../../../services/authentification.service";
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, Validators } from "@angular/forms";
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthentificationService } from "../../../../services/authentification.service";
+import { ValidationActionComponent } from '../validation-action/validation-action.component';
 
 @Component({
   selector: 'app-popup-inscription-garages',
@@ -12,8 +14,11 @@ export class PopupInscriptionGaragesComponent implements OnInit {
   @Output() emitNoneDisplay: EventEmitter<any> = new EventEmitter();
   userRegister: any;
   paramsForm: any;
-
-  constructor(private formBuilder: FormBuilder, private authentificationService: AuthentificationService) {
+  submitted = false;
+  constructor(
+    private formBuilder: FormBuilder,
+    private authentificationService: AuthentificationService,
+    private snackBar: MatSnackBar) {
   }
 
   ngOnInit() {
@@ -45,11 +50,13 @@ export class PopupInscriptionGaragesComponent implements OnInit {
   }
 
   onRegister() {
+    this.submitted = true;
     if (this.userRegister.invalid) {
       return;
     }
     this.authentificationService.inscription(this.userRegister.value).subscribe(data => {
       let params = {}
+      this.openSnackBar('Inscription effectuée avec succès.', "Error");
       const formData: FormData = new FormData();
       formData.append('images', this.paramsForm.files[0]);
       // @ts-ignore
@@ -60,7 +67,8 @@ export class PopupInscriptionGaragesComponent implements OnInit {
         this.emitNoneDisplay.emit();
       })
     }, error => {
-      console.error('inscription error')
+      let message = error.status === 702 ? 'Garage déjà existant.' : 'Erreur inscription'
+      this.openSnackBar(message, "Error");
     })
   }
 
@@ -73,5 +81,15 @@ export class PopupInscriptionGaragesComponent implements OnInit {
       // @ts-ignore
       this.paramsForm.files = (event.target as HTMLInputElement).files;
     }
+  }
+
+  openSnackBar(message: string, type: string) {
+    this.snackBar.openFromComponent(ValidationActionComponent, {
+      duration: 5 * 400,
+      data: {
+        message: message,
+        type: type
+      }
+    });
   }
 }
