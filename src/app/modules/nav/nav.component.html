@@ -46,7 +46,7 @@
   <div class="container">
     <a href="/"><img src="../../../assets/images/logo/logo.png" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end p-0 m-0" id="navbarNavDropdown">
@@ -83,11 +83,10 @@
 
 <!-- Inscription garage -->
 <app-popup-inscription-garages *ngIf="this.inscriptionGarages === 'block'"
-                               [inscriptionGarages]="this.inscriptionGarages"
-                               (emitNoneDisplay)="inscriptionGarages = 'none'">
+  [inscriptionGarages]="this.inscriptionGarages" (emitNoneDisplay)="inscriptionGarages = 'none'">
 </app-popup-inscription-garages>
 
 <!-- Page de connection -->
 <app-connection *ngIf="this.connection === 'block'" [connection]="this.connection"
-                (emitNoneDisplay)="connection = 'none'">
+  (emitNoneDisplay)="connection = 'none'">
 </app-connection>

@@ -1,0 +1,16 @@
+.table-responsive {
+  .table {
+    .thead {}
+
+    tbody {
+      tr {
+        td {
+          a {
+            cursor: pointer;
+            color: var(--bs-link-color);
+          }
+        }
+      }
+    }
+  }
+}

@@ -35,6 +35,11 @@
             outline: none;
           }
 
+          // Si erreur
+          .invalidFeedback {
+            border: 1px solid red !important;
+          }
+
           #submit-contact {
             padding: 8px 50px;
           }

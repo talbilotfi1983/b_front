@@ -1,0 +1,10 @@
+<!-- [ngClass]="this.data.status === 200 ? 'designSuccess' : 'designDelete'" -->
+<div class="d-flex justify-content-between align-items-center designSuccess">
+  <div class="d-flex align-items-center">
+    <!-- [ngClass]="data.status === 200 ? 'bi-x-circle' : 'bi-check2-all'" -->
+    <i class="bi bi-x-circle"></i>
+    <p>{{this.data.message}}</p>
+  </div>
+  <!-- [ngClass]="data.status === 200 ? 'closeDelete' : 'closeSuccess'" -->
+  <i class="bi bi-x-lg closeSuccess" (click)="dismiss()"></i>
+</div>
