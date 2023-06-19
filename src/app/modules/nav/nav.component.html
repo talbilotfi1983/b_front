@@ -10,7 +10,7 @@
           <!-- Panier -->
           <li class="panier">
             <a class="nmbreArticle">
-              <i class='fas fa-cart-plus'></i>&nbsp;
+              <i class="bi bi-cart-plus"></i>
               <span>10 article(s)</span>
             </a>
             <span class="somme">0,00&nbsp;€</span>
@@ -20,17 +20,31 @@
           <!-- Inscription -->
           <li class="inscription" (click)="inscriptionGarages = 'block'">
             <a>
-              <i class='fas fa-user-edit'></i>
+              <i class="bi bi-pencil-square"></i>
               Inscription garage
             </a>
           </li>
           <!-- EO inscription -->
 
-          <!-- Connection -->
-          <li [ngClass]='getLogged()?"deconnection":"connection"' (click)="loginOut()">
+
+          <!-- <li [ngClass]='getLogged() ? "deconnection" : "connection"' (click)="loginOut()">
             <a>
               <i [ngClass]='getLogged()?"fas fa-user-tag":"fas fa-user-lock"'></i>
               {{getLogged() ? "Déconnection" : "Connection"}}
+            </a>
+          </li> -->
+
+          <!-- Connection -->
+          <li *ngIf="!getLogged()" (click)="loginOut()" class="connection">
+            <a>
+              {{!getLogged() ? "Connection" : ""}}
+              <i class="bi bi-box-arrow-left"></i>
+            </a>
+          </li>
+          <li *ngIf="getLogged()" (click)="loginOut()" class="deconnection">
+            <a>
+              Lassana GARY
+              <i class="bi bi-box-arrow-right"></i>
             </a>
           </li>
           <!-- EO connection -->
@@ -55,7 +69,7 @@
           <a class="nav-link active" aria-current="page" href="/">ACCUEIL</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pneus">AUTO</a>
+          <a class="nav-link" routerLink="pneus">AUTO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">4x4/SUV</a>

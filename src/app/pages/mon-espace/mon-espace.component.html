@@ -1,19 +1,28 @@
 <div class="container">
-  <div class="table-responsive">
-    <table class="table table-striped table-hover table-bordered">
-      <thead>
-        <tr>
-          <th scope="col" *ngFor="let label of params.labels">{{label}}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let data of params.datas; let i=index">
-          <td *ngFor="let d of data; let j=index">
-            <span *ngIf="[0, 3].indexOf(j) < 0">{{d}}</span>
-            <a (click)="getFacture(d, j)" *ngIf="[0, 3].indexOf(j) > -1">{{d}}</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="card p-0">
+    <div class="card-header">
+      <h5>Les dernières commandes</h5>
+      <a>Toutes mes commandes</a>
+    </div>
+
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table table-striped table-hover table-bordered m-0">
+          <thead>
+            <tr>
+              <th scope="col" *ngFor="let label of params.labels">{{label}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of params.datas; let i=index">
+              <td *ngFor="let d of data; let j=index">
+                <span *ngIf="[0, 3].indexOf(j) < 0">{{d}}</span>
+                <a (click)="getFacture(d, j)" *ngIf="[0, 3].indexOf(j) > -1">{{d}}</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

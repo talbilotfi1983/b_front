@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 import { ConnectionComponent } from './modules/authentification/connection/connection.component';
 import { InscriptionComponent } from './modules/authentification/inscription/inscription.component';
 import { FooterComponent } from './modules/footer/footer.component';
-import { HeaderComponent } from './modules/header/header.component';
 import { PopupGaragesComponent } from './modules/modals/popup-garages/popup-garages.component';
 import {
   PopupInscriptionGaragesComponent
@@ -31,7 +30,6 @@ import { MonEspaceComponent } from './pages/mon-espace/mon-espace.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     NavComponent,
     SliderComponent,

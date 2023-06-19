@@ -1,16 +1,35 @@
-.table-responsive {
-  .table {
-    .thead {}
+.container {
+  padding: 0;
 
-    tbody {
-      tr {
-        td {
-          a {
-            cursor: pointer;
-            color: var(--bs-link-color);
+  .card {
+    .table-responsive {
+      .table {
+        font-size: 14px;
+        font-family: "Myriad Pro", sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+
+        tbody {
+          tr {
+
+            td {
+              color: #999999;
+
+              a {
+                cursor: pointer;
+                color: var(--bs-link-color);
+              }
+            }
           }
         }
       }
     }
+
+    &:hover {
+      border-left: #E3A719 !important;
+      border-top: #E3A719 !important;
+    }
   }
+
+
 }

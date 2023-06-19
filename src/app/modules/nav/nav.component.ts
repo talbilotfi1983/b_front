@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {AuthentificationService} from "../../../services/authentification.service";
-import {Router} from "@angular/router";
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthentificationService } from "../../../services/authentification.service";
 
 @Component({
   selector: 'app-nav',
@@ -12,7 +12,9 @@ export class NavComponent implements OnInit {
   @Input() inscription: any;
   isLogged: any;
 
-  constructor(private authentificationService: AuthentificationService, private router: Router) {
+  constructor(
+    private authentificationService: AuthentificationService,
+    private router: Router) {
   }
 
   ngOnInit() {
