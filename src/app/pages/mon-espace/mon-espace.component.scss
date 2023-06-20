@@ -2,6 +2,19 @@
   padding: 0;
 
   .card {
+    margin: 0 0 20px 0;
+
+    .card-header {
+      padding: 20px;
+
+      p,
+      a {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
     .table-responsive {
       .table {
         font-size: 14px;
@@ -25,10 +38,6 @@
       }
     }
 
-    &:hover {
-      border-left: #E3A719 !important;
-      border-top: #E3A719 !important;
-    }
   }
 
 
