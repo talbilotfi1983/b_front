@@ -4,6 +4,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 @Injectable({
   providedIn: 'root'
 })
+
 export class SpinnerLoadingService implements OnInit {
 
   constructor(
