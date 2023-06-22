@@ -48,7 +48,7 @@
               </div>
               <div class="col-md-6">
                 <select id="lieuDintervention" class="formSelectPieceSurface" name="lieu_intervation"
-                  (change)="onSelectDistance($event.target)">
+                  (change)="onSelectDistance($event.target)" [ngClass]="submitted && userRegister.controls.intervention_address.errors ? 'invalidFeedback' : ''">
                   <option *ngFor="let distance of paramsForm.distances;let i=index" [value]="distance"
                     [disabled]="i===0">{{distance}}</option>
                 </select>
