@@ -1,14 +1,13 @@
 <div class="container">
   <div class="card p-0">
-    <div class="d-flex align-items-center justify-content-between card-header">
+    <div class="d-flex align-items-center justify-content-center position-sticky top-0 card-header">
       <p class="p-0">Les dernières commandes</p>
-      <a>Voir tous</a>
     </div>
 
     <div class="card-body p-0">
       <div class="table-responsive">
         <table class="table table-striped table-hover table-bordered m-0">
-          <thead>
+          <thead class="position-sticky top-0">
             <tr>
               <th scope="col" *ngFor="let label of params.labels">{{label}}</th>
             </tr>
