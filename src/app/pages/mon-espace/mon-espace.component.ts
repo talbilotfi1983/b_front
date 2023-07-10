@@ -8,7 +8,6 @@ import { AuthentificationService } from "../../../services/authentification.serv
   styleUrls: ['./mon-espace.component.scss']
 })
 export class MonEspaceComponent implements OnInit {
-
   constructor(private authentificationService: AuthentificationService, private router: Router) {
   }
 

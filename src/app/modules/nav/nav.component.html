@@ -58,7 +58,7 @@
 <!-- Nav Bar -->
 <nav class="navbar navbar-expand-lg nav-list-container">
   <div class="container">
-    <a href="/"><img src="../../../assets/images/logo/logo.png" alt="logo"></a>
+    <a routerLink="/"><img src="../../../assets/images/logo/logo.png" alt="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -66,28 +66,19 @@
     <div class="collapse navbar-collapse justify-content-end p-0 m-0" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">ACCUEIL</a>
+          <a class="nav-link active" aria-current="page" routerLink="/">ACCUEIL</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="pneus">AUTO</a>
+          <a class="nav-link" routerLink="/pneus-auto-moto">PNEUS AUTO & MOTO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">4x4/SUV</a>
+          <a class="nav-link" routerLink="/equipements-auto-moto">EQUIPEMENTS AUTO & MOTO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CAMION</a>
+          <a class="nav-link" routerLink="/garages-partenaires">GARAGES PARTENAIRES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">CAMION LEGER</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">MOTO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="garagesPartenaires">GARAGES PARTENAIRES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact">CONTACT</a>
+          <a class="nav-link" routerLink="/contact">CONTACT</a>
         </li>
       </ul>
     </div>
