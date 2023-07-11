@@ -16,6 +16,9 @@
     }
 
     .table-responsive {
+      position: relative;
+      height: 600px;
+
       .table {
         font-size: 14px;
         font-family: "Myriad Pro", sans-serif;
