@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, Validators } from "@angular/forms";
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { AuthentificationService } from "../../../../services/authentification.service";
-import { ValidationActionComponent } from '../validation-action/validation-action.component';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {AuthentificationService} from "../../../../services/authentification.service";
+import {ValidationActionComponent} from '../validation-action/validation-action.component';
 
 @Component({
   selector: 'app-popup-inscription-garages',
@@ -15,6 +15,7 @@ export class PopupInscriptionGaragesComponent implements OnInit {
   userRegister: any;
   paramsForm: any;
   submitted = false;
+
   constructor(
     private formBuilder: FormBuilder,
     private authentificationService: AuthentificationService,
@@ -38,7 +39,7 @@ export class PopupInscriptionGaragesComponent implements OnInit {
       email: ['', Validators.required],
       intervention_address: ['', Validators.required],
       tire_size: ['', Validators.required],
-      observation: ['', Validators.required],
+      observation: [''],
       password: ['', Validators.required]
     });
   }
@@ -57,6 +58,8 @@ export class PopupInscriptionGaragesComponent implements OnInit {
     this.authentificationService.inscription(this.userRegister.value).subscribe(data => {
       let params = {}
       this.openSnackBar('Inscription effectuée avec succès.', "Error");
+      this.closePopup()
+
       const formData: FormData = new FormData();
       formData.append('images', this.paramsForm.files[0]);
       // @ts-ignore

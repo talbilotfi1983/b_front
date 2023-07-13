@@ -7,15 +7,18 @@
     .card-header {
       padding: 20px;
 
-      p,
-      a {
+      p {
         font-size: 20px;
         padding: 0;
         margin: 0;
+        color: #e3a719;
       }
     }
 
     .table-responsive {
+      position: relative;
+      height: 600px;
+
       .table {
         font-size: 14px;
         font-family: "Myriad Pro", sans-serif;
