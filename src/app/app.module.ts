@@ -18,6 +18,7 @@ import {
 import { NavComponent } from './modules/nav/nav.component';
 import { P404Component } from './modules/p404/p404.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { EquipementAutoMotoComponent } from "./pages/equipement-auto-moto/equipement-auto-moto.component";
 import { GaragesPartenairesComponent } from './pages/garages-partenaires/garages-partenaires.component';
 import { EquipementsComponent } from './pages/home/equipements/equipements.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -46,7 +47,8 @@ import { MonEspaceComponent } from './pages/mon-espace/mon-espace.component';
     PopupGaragesComponent,
     ConnectionComponent,
     InscriptionComponent,
-    MonEspaceComponent
+    MonEspaceComponent,
+    EquipementAutoMotoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {GarageService} from "../../../services/garage.service";
+import { Component, Input, OnInit } from '@angular/core';
+import { GarageService } from "../../../services/garage.service";
 
 @Component({
   selector: 'app-garages-partenaires',
@@ -18,6 +18,7 @@ export class GaragesPartenairesComponent implements OnInit {
     this.garageService.coordonneeGarages().subscribe(data => {
       // @ts-ignore
       this.params.coordonneeGarages = data.body
+      console.log('Mes garages :', data.body);
     })
   }
 
