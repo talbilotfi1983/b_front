@@ -14,8 +14,8 @@
               <div class="row">
                 <div class="col-md-4">
                   <label for="civilite">Civilité *</label>
-                  <select name="civilite" id="civilite">
-                    <option value="M.">M.</option>
+                  <select name="civilite" id="civilite" (change)="getCivilite($event)">
+                    <option value="Mr">Mr</option>
                     <option value="Mme">Mme</option>
                     <option value="Mlle">Mlle</option>
                   </select>
@@ -128,7 +128,7 @@
               <form method="POST" action="../bd/newsletter.php" class="subscribe-form">
 
                 <h1>Votre newsletter</h1>
-                <input id="news" type="text" name="email" id="subscribe" placeholder="Email" required/>
+                <input id="news" type="text" name="email" id="subscribe" placeholder="Email" required />
                 <button type="submit" id="submit-subscribe" onclick='validateNewsletter()' name="newsletter">
                   <i class="fa fa-arrow-circle-right"></i>
                 </button>
