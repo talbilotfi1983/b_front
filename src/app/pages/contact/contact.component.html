@@ -89,6 +89,8 @@
               </button>
             </form>
           </div>
+          <h2
+            class="text-success">{{message}}</h2>
           <!-- End contact form box -->
         </div>
       </div>
@@ -128,7 +130,7 @@
               <form method="POST" action="../bd/newsletter.php" class="subscribe-form">
 
                 <h1>Votre newsletter</h1>
-                <input id="news" type="text" name="email" id="subscribe" placeholder="Email" required />
+                <input id="news" type="text" name="email" id="subscribe" placeholder="Email" required/>
                 <button type="submit" id="submit-subscribe" onclick='validateNewsletter()' name="newsletter">
                   <i class="fa fa-arrow-circle-right"></i>
                 </button>

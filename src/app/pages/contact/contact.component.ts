@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from "@angular/forms";
-import { AuthentificationService } from "../../../services/authentification.service";
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, Validators} from "@angular/forms";
+import {AuthentificationService} from "../../../services/authentification.service";
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +8,7 @@ import { AuthentificationService } from "../../../services/authentification.serv
 })
 export class ContactComponent implements OnInit {
   usersFormContact: any;
+  message: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -17,7 +18,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
     this.usersFormContact = this.formBuilder.group({
       lastname: ['', Validators.required],
-      civilite: [undefined, Validators.required],
+      civilite: ['Mr', Validators.required],
       firstname: ['', Validators.required],
       zip: ['', Validators.required],
       address: ['', Validators.required],
@@ -34,7 +35,8 @@ export class ContactComponent implements OnInit {
 
   onContact() {
     this.authentificationService.contactAdmin(this.usersFormContact.value).subscribe(data => {
-      console.log(data)
+      //@ts-ignore
+      this.message = data.message;
     }, error => {
       console.log(error)
     })
