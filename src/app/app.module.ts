@@ -28,6 +28,9 @@ import { PiecesComponent } from './pages/home/pieces/pieces.component';
 import { PneusComponent } from './pages/home/pneus/pneus.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
 import { MonEspaceComponent } from './pages/mon-espace/mon-espace.component';
+import {AgmCoreModule} from "@agm/core";
+import {MatGoogleMapsAutocompleteModule} from "@angular-material-extensions/google-maps-autocomplete";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -60,7 +63,13 @@ import { MonEspaceComponent } from './pages/mon-espace/mon-espace.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAn9jfB1HnLnWdhjFKuxccF1sOkwbEeU0k',
+      libraries: ['places']
+    }),
+    MatGoogleMapsAutocompleteModule,
+    MatCardModule
 
   ],
   providers: [],

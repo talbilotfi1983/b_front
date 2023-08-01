@@ -57,18 +57,22 @@ export class PopupInscriptionGaragesComponent implements OnInit {
     }
     this.authentificationService.inscription(this.userRegister.value).subscribe(data => {
       let params = {}
-      this.openSnackBar('Inscription effectuée avec succès.', "Error");
       this.closePopup()
-
-      const formData: FormData = new FormData();
-      formData.append('images', this.paramsForm.files[0]);
-      // @ts-ignore
-      params.id = data.body.garage._id
-      // @ts-ignore
-      params.formData = formData;
-      this.authentificationService.addLogo(params).subscribe(data => {
-        this.emitNoneDisplay.emit();
-      })
+      if (this.paramsForm.files[0]) {
+        const formData: FormData = new FormData();
+        formData.append('images', this.paramsForm.files[0]);
+        // @ts-ignore
+        params.id = data.body.garage._id
+        // @ts-ignore
+        params.formData = formData;
+        this.authentificationService.addLogo(params).subscribe(data => {
+         // this.openSnackBar('Inscription effectuée avec succès.', "Error");
+         // this.emitNoneDisplay.emit();
+        })
+      } else {
+       // this.openSnackBar('Inscription effectuée avec succès.', "Error");
+      //  this.emitNoneDisplay.emit();
+      }
     }, error => {
       let message = error.status === 702 ? 'Garage déjà existant.' : 'Erreur inscription'
       this.openSnackBar(message, "Error");
@@ -94,5 +98,21 @@ export class PopupInscriptionGaragesComponent implements OnInit {
         type: type
       }
     });
+  }
+    title = 'google-maps-autocomplete';
+  latitude = 48.7230988;
+  longitude = 1.3610346;
+  zoom = 15;
+
+  onAutocompleteSelected($event: any) {
+    console.log($event)
+    this.latitude = $event.geoLocation.latitude;
+    this.longitude = $event.geoLocation.longitude;
+    this.zoom = 15;
+
+  }
+
+  onLocationSelected($event: Location) {
+
   }
 }
