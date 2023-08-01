@@ -65,7 +65,7 @@ import {MatCardModule} from "@angular/material/card";
     MatSnackBarModule,
     NgxSpinnerModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAn9jfB1HnLnWdhjFKuxccF1sOkwbEeU0k',
+      apiKey: 'FFUzaSyAn9jfB1HnLnWdhjFKuxccF1sOkwbEeU0k',
       libraries: ['places']
     }),
     MatGoogleMapsAutocompleteModule,
