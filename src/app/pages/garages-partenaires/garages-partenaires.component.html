@@ -1,110 +1,108 @@
-<div id="container">
-  <section class="block-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="title-section">
-            <h1><span>Nos garages partenaires et centres de montage de pneus</span></h1>
-          </div>
-          <div class="widget tab-posts-widget">
-            <blockquote>
-              <em><strong>Achetez vos pièces auto en ligne sur BOBO Pneus & Equipements : </strong></em>
-              <p>Un service après-vente complet. Pour vous faire livrer les pneus au plus près de chez vous, nous avons
-                conclu des partenariats avec plus de 4700 garages partenaires et centres de montage de pneus en France !
-              </p>
-            </blockquote>
-            <div class="single-post-box">
-              <div class="review-box">
-                <div class="summary-box">
-                  <h2>Trouvez un centre de montage près de chez vous</h2>
-                  <p>Vous souhaitez faire le montage de vos pneumatiques mais vous ne savez pas dans quel centre le
-                    faire ? Trouver un garage partenaire à proximité de chez vous, c'est très simple ! </p>
-                  <div class="summary-degree">
-                    <p><span>8.9</span>Excellent!</p>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End block content -->
-          <!-- API GOOGLE [LEAFLET] -->
-          <div class="container">
-            <div class="contact-info-box">
-              <div class="title-section">
-                <h1><span>Trouver votre garage Partenaires !</span></h1>
-              </div>
-              <div id="mapidPart"></div>
-            </div>
-            <!-- API GOOGLE [LEAFLET] -->
-            <div class="article-box">
-              <div class="title-section">
-                <h1><span>Nos garages partenaires</span></h1>
-              </div>
-              <div class="news-post article-post">
-                <div class="row" *ngFor="let coordonneeGarage of params.coordonneeGarages">
-                  <div class="col-sm-2">
-                    <div class="post-gallery">
-                      <img src="{{coordonneeGarage.garage.logo}}" alt="{{coordonneeGarage.garage.logo}}">
-                    </div>
-                  </div>
-                  <div class=" info col-sm-10">
-                    <div class="post-content">
-                      <h2><a (click)="garages = 'block'">{{coordonneeGarage.garage.name}}</a></h2>
-                      <ul class="post-tags">
-                        <li><i class="fas fa-phone"></i>Tél : <a
-                            href="tel:{{coordonneeGarage.mobile}}">{{coordonneeGarage.mobile}}</a></li>
-                        <li><i class="far fa-envelope"></i>Email : <a
-                            href="mailto:{{coordonneeGarage.email}}">{{coordonneeGarage.email}}</a></li>
-                        <li><i class="fas fa-hand-holding-usd"></i>
-                          A partir de : <span>{{coordonneeGarage.garage.price}} € </span></li><br />
-                        <li><i class="fas fa-circle-notch"></i>
-                          Diamètre maxi : {{coordonneeGarage.garage.tire_size}}"
-                        </li>
-                        <li><i class="far fa-clock"></i>
-                          Partenaire depuis : {{coordonneeGarage.garage.createdAt}}
-                        </li>
-                      </ul>
-                      <div class="detailsGaragesPartenaires">
-                        <p><i class="fas fa-map-marker-alt"></i>
-                          <a target="_black" href="#"> {{coordonneeGarage.address}} {{coordonneeGarage.zip}}
-                            {{coordonneeGarage.city}}</a>
-                        </p>
-                        <button type="button" class="btn btn-outline-secondary btnPlusDetails"
-                          (click)="garages = 'block'"> Plus de détails
-                          <i class="fas fa-directions" aria-hidden="true"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Pagination -->
-              <div class="pagination-box">
-                <ul class="pagination-list">
-                  <li><a class="active" href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><span>...</span></li>
-                  <li><a href="#">9</a></li>
-                  <li><a href="#">Suivant</a></li>
-                </ul>
-                <p>Page 1 à 9</p>
-              </div>
-              <!-- End Pagination -->
-
-            </div>
-          </div>
-          <!-- EO Modif STAGIAIRES -->
-
-          <!-- Liste des garages partenaires -->
-
-          <!-- End Liste des garages partenaires -->
+<section class="block-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-section">
+          <h1><span>Nos garages partenaires et centres de montage de pneus</span></h1>
         </div>
+        <div class="widget tab-posts-widget">
+          <blockquote>
+            <em><strong>Achetez vos pièces auto en ligne sur BOBO Pneus & Equipements : </strong></em>
+            <p>Un service après-vente complet. Pour vous faire livrer les pneus au plus près de chez vous, nous avons
+              conclu des partenariats avec plus de 4700 garages partenaires et centres de montage de pneus en France !
+            </p>
+          </blockquote>
+          <div class="single-post-box">
+            <div class="review-box">
+              <div class="summary-box">
+                <h2>Trouvez un centre de montage près de chez vous</h2>
+                <p>Vous souhaitez faire le montage de vos pneumatiques mais vous ne savez pas dans quel centre le
+                  faire ? Trouver un garage partenaire à proximité de chez vous, c'est très simple ! </p>
+                <div class="summary-degree">
+                  <p><span>8.9</span>Excellent!</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End block content -->
+        <!-- API GOOGLE [LEAFLET] -->
+        <div class="container">
+          <div class="contact-info-box">
+            <div class="title-section">
+              <h1><span>Trouver votre garage Partenaires !</span></h1>
+            </div>
+            <div id="mapidPart"></div>
+          </div>
+          <!-- API GOOGLE [LEAFLET] -->
+          <div class="article-box">
+            <div class="title-section">
+              <h1><span>Nos garages partenaires</span></h1>
+            </div>
+            <div class="news-post article-post">
+              <div class="row" *ngFor="let coordonneeGarage of params.coordonneeGarages">
+                <div class="col-sm-2">
+                  <div class="post-gallery">
+                    <img src="{{coordonneeGarage.garage.logo}}" alt="{{coordonneeGarage.garage.logo}}">
+                  </div>
+                </div>
+                <div class=" info col-sm-10">
+                  <div class="post-content">
+                    <h2><a (click)="garages = 'block'">{{coordonneeGarage.garage.name}}</a></h2>
+                    <ul class="post-tags">
+                      <li><i class="fas fa-phone"></i>Tél : <a
+                          href="tel:{{coordonneeGarage.mobile}}">{{coordonneeGarage.mobile}}</a></li>
+                      <li><i class="far fa-envelope"></i>Email : <a
+                          href="mailto:{{coordonneeGarage.email}}">{{coordonneeGarage.email}}</a></li>
+                      <li><i class="fas fa-hand-holding-usd"></i>
+                        A partir de : <span>{{coordonneeGarage.garage.price}} € </span></li><br />
+                      <li><i class="fas fa-circle-notch"></i>
+                        Diamètre maxi : {{coordonneeGarage.garage.tire_size}}"
+                      </li>
+                      <li><i class="far fa-clock"></i>
+                        Partenaire depuis : {{coordonneeGarage.garage.createdAt}}
+                      </li>
+                    </ul>
+                    <div class="detailsGaragesPartenaires">
+                      <p><i class="fas fa-map-marker-alt"></i>
+                        <a target="_black" href="#"> {{coordonneeGarage.address}} {{coordonneeGarage.zip}}
+                          {{coordonneeGarage.city}}</a>
+                      </p>
+                      <button type="button" class="btn btn-outline-secondary btnPlusDetails"
+                        (click)="garages = 'block'"> Plus de détails
+                        <i class="fas fa-directions" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-box">
+              <ul class="pagination-list">
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><span>...</span></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">Suivant</a></li>
+              </ul>
+              <p>Page 1 à 9</p>
+            </div>
+            <!-- End Pagination -->
+
+          </div>
+        </div>
+        <!-- EO Modif STAGIAIRES -->
+
+        <!-- Liste des garages partenaires -->
+
+        <!-- End Liste des garages partenaires -->
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 <app-popup-garages *ngIf="this.garages === 'block'" [garages]="this.garages" (emitNoneDisplay)="garages = 'none'">
 </app-popup-garages>
