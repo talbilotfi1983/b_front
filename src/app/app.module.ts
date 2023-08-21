@@ -1,6 +1,10 @@
+import { AgmCoreModule } from "@agm/core";
+import { MatGoogleMapsAutocompleteModule } from "@angular-material-extensions/google-maps-autocomplete";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatCardModule } from "@angular/material/card";
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
@@ -28,9 +32,6 @@ import { PiecesComponent } from './pages/home/pieces/pieces.component';
 import { PneusComponent } from './pages/home/pneus/pneus.component';
 import { SliderComponent } from './pages/home/slider/slider.component';
 import { MonEspaceComponent } from './pages/mon-espace/mon-espace.component';
-import {AgmCoreModule} from "@agm/core";
-import {MatGoogleMapsAutocompleteModule} from "@angular-material-extensions/google-maps-autocomplete";
-import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import {MatCardModule} from "@angular/material/card";
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
@@ -65,7 +67,7 @@ import {MatCardModule} from "@angular/material/card";
     MatSnackBarModule,
     NgxSpinnerModule,
     AgmCoreModule.forRoot({
-      apiKey: 'FFUzaSyAn9jfB1HnLnWdhjFKuxccF1sOkwbEeU0k',
+      apiKey: 'AIzaSyCMcoz9y8eYRwmz0Ur08XnkEquwvNWudy0',
       libraries: ['places']
     }),
     MatGoogleMapsAutocompleteModule,
