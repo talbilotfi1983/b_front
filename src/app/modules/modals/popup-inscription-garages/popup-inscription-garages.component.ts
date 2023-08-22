@@ -1,8 +1,8 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
-import {MatSnackBar} from '@angular/material/snack-bar';
-import {AuthentificationService} from "../../../../services/authentification.service";
-import {ValidationActionComponent} from '../validation-action/validation-action.component';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, Validators } from "@angular/forms";
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthentificationService } from "../../../../services/authentification.service";
+import { ValidationActionComponent } from '../validation-action/validation-action.component';
 
 @Component({
   selector: 'app-popup-inscription-garages',
@@ -66,12 +66,12 @@ export class PopupInscriptionGaragesComponent implements OnInit {
         // @ts-ignore
         params.formData = formData;
         this.authentificationService.addLogo(params).subscribe(data => {
-         // this.openSnackBar('Inscription effectuée avec succès.', "Error");
-         // this.emitNoneDisplay.emit();
+          // this.openSnackBar('Inscription effectuée avec succès.', "Error");
+          // this.emitNoneDisplay.emit();
         })
       } else {
-       // this.openSnackBar('Inscription effectuée avec succès.', "Error");
-      //  this.emitNoneDisplay.emit();
+        // this.openSnackBar('Inscription effectuée avec succès.', "Error");
+        //  this.emitNoneDisplay.emit();
       }
     }, error => {
       let message = error.status === 702 ? 'Garage déjà existant.' : 'Erreur inscription'
@@ -99,20 +99,5 @@ export class PopupInscriptionGaragesComponent implements OnInit {
       }
     });
   }
-    title = 'google-maps-autocomplete';
-  latitude = 48.7230988;
-  longitude = 1.3610346;
-  zoom = 15;
 
-  onAutocompleteSelected($event: any) {
-    console.log($event)
-    this.latitude = $event.geoLocation.latitude;
-    this.longitude = $event.geoLocation.longitude;
-    this.zoom = 15;
-
-  }
-
-  onLocationSelected($event: Location) {
-
-  }
 }

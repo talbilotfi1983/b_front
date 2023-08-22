@@ -1,3 +1,26 @@
+<section class="block-wrapper mb-4">
+  <form id="contact-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <mat-card>
+            <mat-card-content>
+              <mat-google-maps-autocomplete appearance="outline" country="fr"
+                (onGermanAddressMapped)="onAutocompleteSelected($event)"
+                [placeholderText]="'Merci de renseigner votre adresse'" [addressLabelText]="'Adresse'">
+                >
+              </mat-google-maps-autocomplete>
+            </mat-card-content>
+          </mat-card>
+          <agm-map style="height: 30vh;" [latitude]='latitude' [longitude]='longitude' [zoom]="zoom">
+            <agm-marker label="a" [latitude]="latitude" [longitude]="longitude">
+            </agm-marker>
+          </agm-map>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
 <section class="block-wrapper">
   <div class="container">
     <div class="row">
@@ -104,5 +127,6 @@
     </div>
   </div>
 </section>
+
 <app-popup-garages *ngIf="this.garages === 'block'" [garages]="this.garages" (emitNoneDisplay)="garages = 'none'">
 </app-popup-garages>
